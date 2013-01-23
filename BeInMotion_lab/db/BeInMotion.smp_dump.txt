@@ -1,0 +1,67 @@
+
+State Machine - |BeInMotion|BeInMotion_qsys:b2v_inst|st_motor_top:stpr_motor_cntrl|CS_MICRO_MODE
+Name CS_MICRO_MODE.MICRO_MODE4 CS_MICRO_MODE.MICRO_MODE3 CS_MICRO_MODE.MICRO_MODE2 CS_MICRO_MODE.MICRO_MODE1 
+CS_MICRO_MODE.MICRO_MODE1 0 0 0 0 
+CS_MICRO_MODE.MICRO_MODE2 0 0 1 1 
+CS_MICRO_MODE.MICRO_MODE3 0 1 0 1 
+CS_MICRO_MODE.MICRO_MODE4 1 0 0 1 
+
+State Machine - |BeInMotion|BeInMotion_qsys:b2v_inst|st_motor_top:stpr_motor_cntrl|CS_HALF_MODE
+Name CS_HALF_MODE.HALF_MODE8 CS_HALF_MODE.HALF_MODE7 CS_HALF_MODE.HALF_MODE6 CS_HALF_MODE.HALF_MODE5 CS_HALF_MODE.HALF_MODE4 CS_HALF_MODE.HALF_MODE3 CS_HALF_MODE.HALF_MODE2 CS_HALF_MODE.HALF_MODE1 
+CS_HALF_MODE.HALF_MODE1 0 0 0 0 0 0 0 0 
+CS_HALF_MODE.HALF_MODE2 0 0 0 0 0 0 1 1 
+CS_HALF_MODE.HALF_MODE3 0 0 0 0 0 1 0 1 
+CS_HALF_MODE.HALF_MODE4 0 0 0 0 1 0 0 1 
+CS_HALF_MODE.HALF_MODE5 0 0 0 1 0 0 0 1 
+CS_HALF_MODE.HALF_MODE6 0 0 1 0 0 0 0 1 
+CS_HALF_MODE.HALF_MODE7 0 1 0 0 0 0 0 1 
+CS_HALF_MODE.HALF_MODE8 1 0 0 0 0 0 0 1 
+
+State Machine - |BeInMotion|BeInMotion_qsys:b2v_inst|st_motor_top:stpr_motor_cntrl|CS_WAVE_MODE
+Name CS_WAVE_MODE.WAVE_MODE4 CS_WAVE_MODE.WAVE_MODE3 CS_WAVE_MODE.WAVE_MODE2 CS_WAVE_MODE.WAVE_MODE1 
+CS_WAVE_MODE.WAVE_MODE1 0 0 0 0 
+CS_WAVE_MODE.WAVE_MODE2 0 0 1 1 
+CS_WAVE_MODE.WAVE_MODE3 0 1 0 1 
+CS_WAVE_MODE.WAVE_MODE4 1 0 0 1 
+
+State Machine - |BeInMotion|BeInMotion_qsys:b2v_inst|st_motor_top:stpr_motor_cntrl|CS_FULL_MODE
+Name CS_FULL_MODE.FULL_MODE4 CS_FULL_MODE.FULL_MODE3 CS_FULL_MODE.FULL_MODE2 CS_FULL_MODE.FULL_MODE1 
+CS_FULL_MODE.FULL_MODE1 0 0 0 0 
+CS_FULL_MODE.FULL_MODE2 0 0 1 1 
+CS_FULL_MODE.FULL_MODE3 0 1 0 1 
+CS_FULL_MODE.FULL_MODE4 1 0 0 1 
+
+State Machine - |BeInMotion|BeInMotion_qsys:b2v_inst|st_motor_top:stpr_motor_cntrl|current_state
+Name current_state.FULL current_state.HALF current_state.WAVE current_state.IDLE current_state.MICRO 
+current_state.IDLE 0 0 0 0 0 
+current_state.WAVE 0 0 1 1 0 
+current_state.HALF 0 1 0 1 0 
+current_state.FULL 1 0 0 1 0 
+current_state.MICRO 0 0 0 1 1 
+
+State Machine - |BeInMotion|BeInMotion_qsys:b2v_inst|i2c_master_top:proximity_ir|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 
+
+State Machine - |BeInMotion|BeInMotion_qsys:b2v_inst|i2c_master_top:bat_gas_gauge|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 
+
+State Machine - |BeInMotion|BeInMotion_qsys:b2v_inst|BeInMotion_qsys_cpu:cpu|BeInMotion_qsys_cpu_nios2_oci:the_BeInMotion_qsys_cpu_nios2_oci|BeInMotion_qsys_cpu_jtag_debug_module_wrapper:the_BeInMotion_qsys_cpu_jtag_debug_module_wrapper|BeInMotion_qsys_cpu_jtag_debug_module_tck:the_BeInMotion_qsys_cpu_jtag_debug_module_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

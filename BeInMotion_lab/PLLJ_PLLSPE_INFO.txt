@@ -1,0 +1,5 @@
+PLL_Name	BeInMotion_qsys:b2v_inst|BeInMotion_qsys_pll:pll|BeInMotion_qsys_pll_altpll_ama2:sd1|pll7
+PLLJITTER	35
+PLLSPEmax	84
+PLLSPEmin	-53
+

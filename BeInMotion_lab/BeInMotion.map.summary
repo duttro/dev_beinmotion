@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Jan 22 22:40:13 2013
+Quartus II 32-bit Version : 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition
+Revision Name : BeInMotion
+Top-level Entity Name : BeInMotion
+Family : Cyclone IV E
+Total logic elements : 7,674
+    Total combinational functions : 5,672
+    Dedicated logic registers : 4,441
+Total registers : 4441
+Total pins : 62
+Total virtual pins : 0
+Total memory bits : 339,456
+Embedded Multiplier 9-bit elements : 36
+Total PLLs : 1

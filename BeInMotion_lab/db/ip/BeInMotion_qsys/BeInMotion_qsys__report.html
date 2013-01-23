@@ -1,0 +1,1689 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Report</title>
+  <style type="text/css">
+body { font-family:arial ;}
+a { text-decoration:underline ; color:#003000 ;}
+a:hover { text-decoration:underline ; color:0030f0 ;}
+td { padding : 5px ;}
+table.topTitle { width:100% ;}
+table.topTitle td.l { text-align:left ; font-weight: bold ; font-size:30px ;}
+table.topTitle td.r { text-align:right ; font-weight: bold ; font-size:16px ;}
+table.blueBar { width : 100% ; border-spacing : 0px ;}
+table.blueBar td { background:#0036ff ; font-size:12px ; color : white ; text-align : left ; font-weight : bold ;}
+table.blueBar td.l { text-align : left ;}
+table.blueBar td.r { text-align : right ;}
+table.items { width:100% ; border-collapse:collapse ;}
+table.items td.label { font-weight:bold ; font-size:16px ; vertical-align:top ;}
+table.items td.mono { font-family:courier ; font-size:12px ; white-space:pre ;}
+div.label { font-weight:bold ; font-size:16px ; vertical-align:top ; text-align:center ;}
+table.grid { border-collapse:collapse ;}
+table.grid td { border:1px solid #bbb ; font-size:12px ;}
+body { font-family:arial ;}
+table.x { font-family:courier ; border-collapse:collapse ; padding:2px ;}
+table.x td { border:1px solid #bbb ;}
+td.tableTitle { font-weight:bold ; text-align:center ;}
+table.grid { border-collapse:collapse ;}
+table.grid td { border:1px solid #bbb ;}
+table.grid td.tableTitle { font-weight:bold ; text-align:center ;}
+table.mmap { border-collapse:collapse ; text-size:11px ; border:1px solid #d8d8d8 ;}
+table.mmap td { border-color:#d8d8d8 ; border-width:1px ; border-style:solid ;}
+table.mmap td.empty { border-style:none ; background-color:#f0f0f0 ;}
+table.mmap td.slavemodule { text-align:left ; font-size:11px ; border-style:solid solid none solid ;}
+table.mmap td.slavem { text-align:right ; font-size:9px ; font-style:italic ; border-style:none solid none solid ;}
+table.mmap td.slaveb { text-align:right ; font-size:9px ; font-style:italic ; border-style:none solid solid solid ;}
+table.mmap td.mastermodule { text-align:center ; font-size:11px ; border-style:solid solid none solid ;}
+table.mmap td.masterlr { text-align:center ; font-size:9px ; font-style:italic ; border-style:none solid solid solid ;}
+table.mmap td.masterl { text-align:center ; font-size:9px ; font-style:italic ; border-style:none none solid solid ;}
+table.mmap td.masterm { text-align:center ; font-size:9px ; font-style:italic ; border-style:none none solid none ;}
+table.mmap td.masterr { text-align:center ; font-size:9px ; font-style:italic ; border-style:none solid solid none ;}
+table.mmap td.addr { font-family:courier ; font-size:9px ; text-align:right ;}
+table.connectionboxes { border-collapse:separate ; border-spacing:0px ; font-family:arial ;}
+table.connectionboxes td.from { border-bottom:1px solid black ; font-size:9px ; font-style:italic ; vertical-align:bottom ; text-align:left ;}
+table.connectionboxes td.to { font-size:9px ; font-style:italic ; vertical-align:top ; text-align:right ;}
+table.connectionboxes td.lefthandwire { border-bottom:1px solid black ; font-size:9px ; font-style:italic ; vertical-align:bottom ; text-align:right ;}
+table.connectionboxes td.righthandwire { border-bottom:1px solid black ; font-size:9px ; font-style:italic ; vertical-align:bottom ; text-align:left ;}
+table.connectionboxes td.righthandlabel { font-size:11px ; vertical-align:bottom ; text-align:left ;}
+table.connectionboxes td.neighbor { padding:3px ; border:1px solid black ; font-size: 11px ; background:#e8e8e8 ; vertical-align:center ; text-align:center ;}
+table.connectionboxes td.main { padding:8px ; border:1px solid black ; font-size: 14px ; font-weight:bold ; background:#ffffff ; vertical-align:center ; text-align:center ;}
+.parametersbox { border:1px solid #d0d0d0 ; display:inline-block ; max-height:160px ; overflow:auto ; width:360px ; font-size:10px ;}
+.flowbox { display:inline-block ;}
+.parametersbox table { font-size:10px ;}
+td.parametername { font-style:italic ;}
+td.parametervalue { font-weight:bold ;}
+div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; border-top:1px solid #707070 ; border-bottom:1px solid #707070 ; padding:20px ; margin:20px ; width:auto ;}</style>
+ </head>
+ <body>
+  <table class="topTitle">
+   <tr>
+    <td class="l">BeInMotion_qsys</td>
+    <td class="r">BeInMotion_qsys
+     <br/>1.0
+     <br/>
+    </td>
+   </tr>
+  </table>
+  <table class="blueBar">
+   <tr>
+    <td class="l">2013.01.22.22:38:28</td>
+    <td class="r">Generation Report</td>
+   </tr>
+  </table>
+  <table class="items">
+   <tr>
+    <td class="label">Output Directory</td>
+    <td class="mono">C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/</td>
+   </tr>
+   <tr>
+    <td class="label">Files</td>
+    <td class="mono">C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/BeInMotion_qsys.v (1126703 bytes VERILOG)
+     <br/>
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_jtag_uart.v (24561 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_jtag_uart_input_mutex.dat (3 bytes OTHER)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_jtag_uart_input_stream.dat (10 bytes OTHER)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_jtag_uart_output_stream.dat (0 bytes OTHER)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_onchip_ram.hex (210013 bytes HEX)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_onchip_ram.v (4086 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cpu.sdc (4156 bytes SDC)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cpu.v (195901 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cpu_jtag_debug_module_sysclk.v (7194 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cpu_jtag_debug_module_tck.v (8564 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cpu_jtag_debug_module_wrapper.v (10541 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cpu_ociram_default_contents.mif (5714 bytes MIF)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cpu_oci_test_bench.v (1517 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cpu_rf_ram_a.mif (600 bytes MIF)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cpu_rf_ram_b.mif (600 bytes MIF)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cpu_test_bench.v (30577 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_timer.v (6991 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_user_io.v (3278 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_user_led.v (2336 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_pb.v (1942 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_bat_cc_al_n.v (2883 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_ir_led1.v (2317 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_st_current_sensor.v (12660 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_ps_din.v (3558 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_epcs.v (17108 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_epcs_boot_rom_synth.hex (5148 bytes HEX)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_pll.v (11077 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/ir_recever.v (4843 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/pwm_avalon_interface.v (3943 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/pwm_register_file.v (6319 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/pwm_task_logic.v (3378 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/i2c_master_bit_ctrl.v (21240 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/i2c_master_byte_ctrl.v (10665 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/i2c_master_top.v (10525 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/pid_controller.v (2938 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/pid_controller_top.v (2930 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_sysid.v (1454 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/st_motor_top.v (24386 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_uart_0.v (37420 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_uart_0_input_data_mutex.dat (3 bytes OTHER)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_uart_0_input_data_stream.dat (7 bytes OTHER)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_uart_0_log_module.txt (0 bytes OTHER)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_merlin_master_translator.sv (16802 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_merlin_slave_translator.sv (16043 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_merlin_slave_agent.sv (19132 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_merlin_burst_uncompressor.sv (10373 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_avalon_sc_fifo.v (32228 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_merlin_master_agent.sv (8686 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_addr_router.sv (6744 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_addr_router_001.sv (14669 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_id_router.sv (6064 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_id_router_003.sv (5994 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_reset_controller.v (3595 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_reset_synchronizer.v (3564 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_reset_controller.sdc (1179 bytes SDC)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cmd_xbar_demux.sv (4761 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cmd_xbar_demux_001.sv (22169 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_merlin_arbitrator.sv (9460 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_cmd_xbar_mux.sv (10442 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_rsp_xbar_demux.sv (4127 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_rsp_xbar_demux_003.sv (3501 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_rsp_xbar_mux.sv (12062 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_rsp_xbar_mux_001.sv (34381 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_avalon_st_handshake_clock_crosser.v (7493 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_avalon_st_clock_crosser.v (4900 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_avalon_st_pipeline_base.v (4716 bytes VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/BeInMotion_qsys_irq_mapper.sv (2513 bytes SYSTEM_VERILOG)
+     <br/>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_irq_clock_crosser.sv (1651 bytes SYSTEM_VERILOG)
+     <br/>
+    </td>
+   </tr>
+   <tr>
+    <td class="label">Instantiations</td>
+    <td class="mono">
+     <table class="grid">
+      <tr>
+       <td><b>BeInMotion_qsys</b>
+        <br/>BeInMotion_qsys v1.0</td>
+       <td><b>BeInMotion_qsys_jtag_uart</b> as jtag_uart
+        <br/><b>BeInMotion_qsys_onchip_ram</b> as onchip_ram
+        <br/><b>BeInMotion_qsys_cpu</b> as cpu
+        <br/><b>BeInMotion_qsys_timer</b> as timer
+        <br/><b>BeInMotion_qsys_user_io</b> as user_io
+        <br/><b>BeInMotion_qsys_user_led</b> as user_led
+        <br/><b>BeInMotion_qsys_pb</b> as pb
+        <br/><b>BeInMotion_qsys_bat_cc_al_n</b> as bat_cc_al_n
+        <br/><b>BeInMotion_qsys_ir_led1</b> as ir_led1, ir_led2, ps_en, ps_led_on
+        <br/><b>BeInMotion_qsys_st_current_sensor</b> as st_current_sensor
+        <br/><b>BeInMotion_qsys_ps_din</b> as ps_din
+        <br/><b>BeInMotion_qsys_epcs</b> as epcs
+        <br/><b>BeInMotion_qsys_pll</b> as pll
+        <br/><b>ir_receiver</b> as ir_rx1, ir_rx2
+        <br/><b>pwm_avalon_interface</b> as dc1_pwm2, dc2_pwm1, dc2_pwm2, dc1_pwm1
+        <br/><b>i2c_master_top</b> as bat_gas_gauge, proximity_ir
+        <br/><b>pid_controller_top</b> as pid_con_m1, pid_con_m2
+        <br/><b>BeInMotion_qsys_sysid</b> as sysid
+        <br/><b>st_motor_top</b> as stpr_motor_cntrl
+        <br/><b>BeInMotion_qsys_uart_0</b> as uart_0
+        <br/><b>altera_merlin_master_translator</b> as cpu_instruction_master_translator, cpu_data_master_translator
+        <br/><b>altera_merlin_slave_translator</b> as cpu_jtag_debug_module_translator, onchip_ram_s1_translator, epcs_epcs_control_port_translator, jtag_uart_avalon_jtag_slave_translator, timer_s1_translator, user_io_s1_translator, user_led_s1_translator, pb_s1_translator, bat_cc_al_n_s1_translator, ir_led1_s1_translator, ir_led2_s1_translator, st_current_sensor_spi_control_port_translator, ps_din_s1_translator, ps_en_s1_translator, ps_led_on_s1_translator, pll_pll_slave_translator, ir_rx1_avalon_slave_0_translator, ir_rx2_avalon_slave_0_translator, dc1_pwm2_avalon_slave_0_translator, dc2_pwm2_avalon_slave_0_translator, dc1_pwm1_avalon_slave_0_translator, dc2_pwm1_avalon_slave_0_translator, bat_gas_gauge_avalon_slave_0_translator, proximity_ir_avalon_slave_0_translator, lcd_intf_avalon_slave_translator, pid_con_m1_avalon_slave_0_translator, pid_con_m2_avalon_slave_0_translator, sysid_control_slave_translator, stpr_motor_cntrl_avalon_slave_0_translator, uart_0_s1_translator
+        <br/><b>altera_merlin_slave_agent</b> as pid_con_m1_avalon_slave_0_translator_avalon_universal_slave_0_agent, ir_led1_s1_translator_avalon_universal_slave_0_agent, ps_din_s1_translator_avalon_universal_slave_0_agent, ps_led_on_s1_translator_avalon_universal_slave_0_agent, uart_0_s1_translator_avalon_universal_slave_0_agent, bat_cc_al_n_s1_translator_avalon_universal_slave_0_agent, lcd_intf_avalon_slave_translator_avalon_universal_slave_0_agent, proximity_ir_avalon_slave_0_translator_avalon_universal_slave_0_agent, user_io_s1_translator_avalon_universal_slave_0_agent, sysid_control_slave_translator_avalon_universal_slave_0_agent, user_led_s1_translator_avalon_universal_slave_0_agent, cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent, pll_pll_slave_translator_avalon_universal_slave_0_agent, dc2_pwm1_avalon_slave_0_translator_avalon_universal_slave_0_agent, epcs_epcs_control_port_translator_avalon_universal_slave_0_agent, dc1_pwm2_avalon_slave_0_translator_avalon_universal_slave_0_agent, pb_s1_translator_avalon_universal_slave_0_agent, onchip_ram_s1_translator_avalon_universal_slave_0_agent, dc2_pwm2_avalon_slave_0_translator_avalon_universal_slave_0_agent, jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent, st_current_sensor_spi_control_port_translator_avalon_universal_slave_0_agent, ps_en_s1_translator_avalon_universal_slave_0_agent, dc1_pwm1_avalon_slave_0_translator_avalon_universal_slave_0_agent, timer_s1_translator_avalon_universal_slave_0_agent, ir_led2_s1_translator_avalon_universal_slave_0_agent, pid_con_m2_avalon_slave_0_translator_avalon_universal_slave_0_agent, ir_rx1_avalon_slave_0_translator_avalon_universal_slave_0_agent, ir_rx2_avalon_slave_0_translator_avalon_universal_slave_0_agent, bat_gas_gauge_avalon_slave_0_translator_avalon_universal_slave_0_agent, stpr_motor_cntrl_avalon_slave_0_translator_avalon_universal_slave_0_agent
+        <br/><b>altera_avalon_sc_fifo</b> as pid_con_m1_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo, ir_led1_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, ps_din_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, ps_din_s1_translator_avalon_universal_slave_0_agent_rdata_fifo, ps_led_on_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, uart_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, bat_cc_al_n_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, lcd_intf_avalon_slave_translator_avalon_universal_slave_0_agent_rsp_fifo, proximity_ir_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo, user_io_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, sysid_control_slave_translator_avalon_universal_slave_0_agent_rsp_fifo, sysid_control_slave_translator_avalon_universal_slave_0_agent_rdata_fifo, user_led_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo, pll_pll_slave_translator_avalon_universal_slave_0_agent_rsp_fifo, dc2_pwm1_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo, epcs_epcs_control_port_translator_avalon_universal_slave_0_agent_rsp_fifo, dc1_pwm2_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo, pb_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, onchip_ram_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, dc2_pwm2_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo, jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo, st_current_sensor_spi_control_port_translator_avalon_universal_slave_0_agent_rsp_fifo, ps_en_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, dc1_pwm1_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo, timer_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, ir_led2_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, pid_con_m2_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo, ir_rx1_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo, ir_rx1_avalon_slave_0_translator_avalon_universal_slave_0_agent_rdata_fifo, ir_rx2_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo, ir_rx2_avalon_slave_0_translator_avalon_universal_slave_0_agent_rdata_fifo, bat_gas_gauge_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo, stpr_motor_cntrl_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo
+        <br/><b>altera_merlin_master_agent</b> as cpu_data_master_translator_avalon_universal_master_0_agent, cpu_instruction_master_translator_avalon_universal_master_0_agent
+        <br/><b>BeInMotion_qsys_addr_router</b> as addr_router
+        <br/><b>BeInMotion_qsys_addr_router_001</b> as addr_router_001
+        <br/><b>BeInMotion_qsys_id_router</b> as id_router, id_router_001, id_router_002
+        <br/><b>BeInMotion_qsys_id_router_003</b> as id_router_003, id_router_004, id_router_005, id_router_006, id_router_007, id_router_008, id_router_009, id_router_010, id_router_011, id_router_012, id_router_013, id_router_014, id_router_015, id_router_016, id_router_017, id_router_018, id_router_019, id_router_020, id_router_021, id_router_022, id_router_023, id_router_024, id_router_025, id_router_026, id_router_027, id_router_028, id_router_029
+        <br/><b>altera_reset_controller</b> as rst_controller, rst_controller_001, rst_controller_002, rst_controller_003
+        <br/><b>BeInMotion_qsys_cmd_xbar_demux</b> as cmd_xbar_demux
+        <br/><b>BeInMotion_qsys_cmd_xbar_demux_001</b> as cmd_xbar_demux_001
+        <br/><b>BeInMotion_qsys_cmd_xbar_mux</b> as cmd_xbar_mux, cmd_xbar_mux_001, cmd_xbar_mux_002
+        <br/><b>BeInMotion_qsys_rsp_xbar_demux</b> as rsp_xbar_demux, rsp_xbar_demux_001, rsp_xbar_demux_002
+        <br/><b>BeInMotion_qsys_rsp_xbar_demux_003</b> as rsp_xbar_demux_003, rsp_xbar_demux_004, rsp_xbar_demux_005, rsp_xbar_demux_006, rsp_xbar_demux_007, rsp_xbar_demux_008, rsp_xbar_demux_009, rsp_xbar_demux_010, rsp_xbar_demux_011, rsp_xbar_demux_012, rsp_xbar_demux_013, rsp_xbar_demux_014, rsp_xbar_demux_015, rsp_xbar_demux_016, rsp_xbar_demux_017, rsp_xbar_demux_018, rsp_xbar_demux_019, rsp_xbar_demux_020, rsp_xbar_demux_021, rsp_xbar_demux_022, rsp_xbar_demux_023, rsp_xbar_demux_024, rsp_xbar_demux_025, rsp_xbar_demux_026, rsp_xbar_demux_027, rsp_xbar_demux_028, rsp_xbar_demux_029
+        <br/><b>BeInMotion_qsys_rsp_xbar_mux</b> as rsp_xbar_mux
+        <br/><b>BeInMotion_qsys_rsp_xbar_mux_001</b> as rsp_xbar_mux_001
+        <br/><b>altera_avalon_st_handshake_clock_crosser</b> as crosser, crosser_001, crosser_002, crosser_003, crosser_004, crosser_005, crosser_006, crosser_007
+        <br/><b>BeInMotion_qsys_irq_mapper</b> as irq_mapper
+        <br/><b>altera_irq_clock_crosser</b> as irq_synchronizer, irq_synchronizer_001, irq_synchronizer_002
+        <br/>
+       </td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_jtag_uart</b>
+        <br/>altera_avalon_jtag_uart v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_onchip_ram</b>
+        <br/>altera_avalon_onchip_memory2 v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_cpu</b>
+        <br/>altera_nios2_qsys v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_timer</b>
+        <br/>altera_avalon_timer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_user_io</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_user_led</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_pb</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_bat_cc_al_n</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_ir_led1</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_st_current_sensor</b>
+        <br/>altera_avalon_spi v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_ps_din</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_epcs</b>
+        <br/>altera_avalon_epcs_flash_controller v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_pll</b>
+        <br/>altpll v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>ir_receiver</b>
+        <br/>ir_receiver v1.0</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>pwm_avalon_interface</b>
+        <br/>DC_Motor_Controller v1.0</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>i2c_master_top</b>
+        <br/>i2c_master_top v1.0</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>pid_controller_top</b>
+        <br/>pid_controller_top v1.0</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_sysid</b>
+        <br/>altera_avalon_sysid_qsys v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>st_motor_top</b>
+        <br/>st_motor_top v1.0</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_uart_0</b>
+        <br/>altera_avalon_uart v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_merlin_master_translator</b>
+        <br/>altera_merlin_master_translator v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_merlin_slave_translator</b>
+        <br/>altera_merlin_slave_translator v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_merlin_slave_agent</b>
+        <br/>altera_merlin_slave_agent v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_avalon_sc_fifo</b>
+        <br/>altera_avalon_sc_fifo v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_merlin_master_agent</b>
+        <br/>altera_merlin_master_agent v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_addr_router</b>
+        <br/>altera_merlin_router v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_addr_router_001</b>
+        <br/>altera_merlin_router v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_id_router</b>
+        <br/>altera_merlin_router v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_id_router_003</b>
+        <br/>altera_merlin_router v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_reset_controller</b>
+        <br/>altera_reset_controller v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_cmd_xbar_demux</b>
+        <br/>altera_merlin_demultiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_cmd_xbar_demux_001</b>
+        <br/>altera_merlin_demultiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_cmd_xbar_mux</b>
+        <br/>altera_merlin_multiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_rsp_xbar_demux</b>
+        <br/>altera_merlin_demultiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_rsp_xbar_demux_003</b>
+        <br/>altera_merlin_demultiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_rsp_xbar_mux</b>
+        <br/>altera_merlin_multiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_rsp_xbar_mux_001</b>
+        <br/>altera_merlin_multiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_avalon_st_handshake_clock_crosser</b>
+        <br/>altera_avalon_st_handshake_clock_crosser v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>BeInMotion_qsys_irq_mapper</b>
+        <br/>altera_irq_mapper v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_irq_clock_crosser</b>
+        <br/>altera_irq_clock_crosser v11.1</td>
+       <td></td>
+      </tr>
+     </table>
+    </td>
+   </tr>
+  </table>
+  <div style="width:100% ;  height:10px"> </div>
+  <div class="label">Generation Messages</div>
+  <div style="white-space:pre ; font-family:courier">2013.01.22.22:35:47 [Info] BeInMotion_qsys.onchip_ram: Memory will be initialized from onchip_ram.hex
+2013.01.22.22:35:39 [Debug] BeInMotion_qsys.altera_nios2_qsys: When a generate simulation callback is defined a synthesis generation callback should also be defined
+2013.01.22.22:35:47 [Info] BeInMotion_qsys.cpu: CPUID control register value is 0. Please manually assign CPUID if creating multiple Nios II system
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.cpu: Timing: VAL:1/0.069s ELA:1/0.011s
+2013.01.22.22:35:47 [Info] BeInMotion_qsys.user_io: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+2013.01.22.22:35:47 [Info] BeInMotion_qsys.pb: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+2013.01.22.22:35:47 [Info] BeInMotion_qsys.bat_cc_al_n: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+2013.01.22.22:35:47 [Info] BeInMotion_qsys.ps_din: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.pll: Timing: VAL:1/0.027s ELA:1/0.006s
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.dc1_pwm2: Timing: QME:1/1.350s
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.dc2_pwm1: Timing: QME:1/1.350s
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.dc2_pwm2: Timing: QME:1/1.350s
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.dc1_pwm1: Timing: QME:1/1.350s
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.bat_gas_gauge: Timing: QME:1/1.322s
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.proximity_ir: Timing: QME:1/1.322s
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.pid_con_m1: Timing: QME:1/1.332s
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.pid_con_m2: Timing: QME:1/1.332s
+2013.01.22.22:35:47 [Info] BeInMotion_qsys.sysid: System ID will no longer be automatically assigned.
+2013.01.22.22:35:47 [Info] BeInMotion_qsys.sysid: Time stamp will be automatically updated when this component is generated.
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.sysid: Timing: VAL:2/0.000s/0.000s
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys.stpr_motor_cntrl: Timing: QME:1/1.324s
+2013.01.22.22:35:47 [Info] BeInMotion_qsys: Generating <b>BeInMotion_qsys</b> "<b>BeInMotion_qsys</b>" for QUARTUS_SYNTH
+2013.01.22.22:35:47 [Debug] BeInMotion_qsys: queue size: 0 starting:BeInMotion_qsys "BeInMotion_qsys"
+2013.01.22.22:35:47 [Debug] Transform: PipelineBridgeSwap
+2013.01.22.22:35:47 [Info] pipeline_bridge_swap_transform: After transform: <b>31</b> modules, <b>129</b> connections
+2013.01.22.22:35:47 [Debug] Transform: ClockCrossingBridgeSwap
+2013.01.22.22:35:47 [Debug] Transform: QsysBetaIPSwap
+2013.01.22.22:35:47 [Debug] Transform: CustomInstructionTransform
+2013.01.22.22:35:47 [Info] No custom instruction connections, skipping transform 
+2013.01.22.22:35:47 [Debug] Transform: TristateConduitUpgradeTransform
+2013.01.22.22:35:48 [Debug] Transform: TranslatorTransform
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Info] merlin_translator_transform: After transform: <b>63</b> modules, <b>253</b> connections
+2013.01.22.22:35:48 [Debug] Transform: DomainTransform
+2013.01.22.22:35:48 [Debug] Transform merlin_domain_transform not run on matched interfaces cpu.instruction_master and cpu_instruction_master_translator.avalon_anti_master_0
+2013.01.22.22:35:48 [Debug] Transform merlin_domain_transform not run on matched interfaces cpu.data_master and cpu_data_master_translator.avalon_anti_master_0
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:48 [Progress] min: 0
+2013.01.22.22:35:48 [Progress] max: 1
+2013.01.22.22:35:48 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:49 [Progress] min: 0
+2013.01.22.22:35:49 [Progress] max: 1
+2013.01.22.22:35:49 [Progress] current: 1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces cpu_jtag_debug_module_translator.avalon_anti_slave_0 and cpu.jtag_debug_module
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces onchip_ram_s1_translator.avalon_anti_slave_0 and onchip_ram.s1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces epcs_epcs_control_port_translator.avalon_anti_slave_0 and epcs.epcs_control_port
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces jtag_uart_avalon_jtag_slave_translator.avalon_anti_slave_0 and jtag_uart.avalon_jtag_slave
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces timer_s1_translator.avalon_anti_slave_0 and timer.s1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces user_io_s1_translator.avalon_anti_slave_0 and user_io.s1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces user_led_s1_translator.avalon_anti_slave_0 and user_led.s1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces pb_s1_translator.avalon_anti_slave_0 and pb.s1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces bat_cc_al_n_s1_translator.avalon_anti_slave_0 and bat_cc_al_n.s1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces ir_led1_s1_translator.avalon_anti_slave_0 and ir_led1.s1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces ir_led2_s1_translator.avalon_anti_slave_0 and ir_led2.s1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces st_current_sensor_spi_control_port_translator.avalon_anti_slave_0 and st_current_sensor.spi_control_port
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces ps_din_s1_translator.avalon_anti_slave_0 and ps_din.s1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces ps_en_s1_translator.avalon_anti_slave_0 and ps_en.s1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces ps_led_on_s1_translator.avalon_anti_slave_0 and ps_led_on.s1
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces pll_pll_slave_translator.avalon_anti_slave_0 and pll.pll_slave
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces ir_rx1_avalon_slave_0_translator.avalon_anti_slave_0 and ir_rx1.avalon_slave_0
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces ir_rx2_avalon_slave_0_translator.avalon_anti_slave_0 and ir_rx2.avalon_slave_0
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces dc1_pwm2_avalon_slave_0_translator.avalon_anti_slave_0 and dc1_pwm2.avalon_slave_0
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces dc2_pwm2_avalon_slave_0_translator.avalon_anti_slave_0 and dc2_pwm2.avalon_slave_0
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces dc1_pwm1_avalon_slave_0_translator.avalon_anti_slave_0 and dc1_pwm1.avalon_slave_0
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces dc2_pwm1_avalon_slave_0_translator.avalon_anti_slave_0 and dc2_pwm1.avalon_slave_0
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces bat_gas_gauge_avalon_slave_0_translator.avalon_anti_slave_0 and bat_gas_gauge.avalon_slave_0
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces proximity_ir_avalon_slave_0_translator.avalon_anti_slave_0 and proximity_ir.avalon_slave_0
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces lcd_intf_avalon_slave_translator.avalon_anti_slave_0 and lcd_intf.avalon_slave
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces pid_con_m1_avalon_slave_0_translator.avalon_anti_slave_0 and pid_con_m1.avalon_slave_0
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces pid_con_m2_avalon_slave_0_translator.avalon_anti_slave_0 and pid_con_m2.avalon_slave_0
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces sysid_control_slave_translator.avalon_anti_slave_0 and sysid.control_slave
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces stpr_motor_cntrl_avalon_slave_0_translator.avalon_anti_slave_0 and stpr_motor_cntrl.avalon_slave_0
+2013.01.22.22:35:50 [Debug] Transform merlin_domain_transform not run on matched interfaces uart_0_s1_translator.avalon_anti_slave_0 and uart_0.s1
+2013.01.22.22:35:50 [Info] merlin_domain_transform: After transform: <b>130</b> modules, <b>691</b> connections
+2013.01.22.22:35:50 [Debug] Transform: RouterTransform
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Info] merlin_router_transform: After transform: <b>162</b> modules, <b>815</b> connections
+2013.01.22.22:35:50 [Debug] Transform: TrafficLimiterTransform
+2013.01.22.22:35:50 [Debug] Transform: BurstTransform
+2013.01.22.22:35:50 [Debug] Transform: ResetAdaptation
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Info] reset_adaptation_transform: After transform: <b>166</b> modules, <b>658</b> connections
+2013.01.22.22:35:50 [Debug] Transform: NetworkToSwitchTransform
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:50 [Progress] min: 0
+2013.01.22.22:35:50 [Progress] max: 1
+2013.01.22.22:35:50 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Info] merlin_network_to_switch_transform: After transform: <b>229</b> modules, <b>788</b> connections
+2013.01.22.22:35:51 [Debug] Transform: WidthTransform
+2013.01.22.22:35:51 [Debug] Transform: RouterTableTransform
+2013.01.22.22:35:51 [Debug] Transform: ClockCrossingTransform
+2013.01.22.22:35:51 [Info] Inserting clock-crossing logic between cmd_xbar_demux_001.src12 and cmd_xbar_mux_012.sink0
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Info] Inserting clock-crossing logic between cmd_xbar_demux_001.src16 and cmd_xbar_mux_016.sink0
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Info] Inserting clock-crossing logic between cmd_xbar_demux_001.src17 and cmd_xbar_mux_017.sink0
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Info] Inserting clock-crossing logic between cmd_xbar_demux_001.src27 and cmd_xbar_mux_027.sink0
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Info] Inserting clock-crossing logic between rsp_xbar_demux_012.src0 and rsp_xbar_mux_001.sink12
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Info] Inserting clock-crossing logic between rsp_xbar_demux_016.src0 and rsp_xbar_mux_001.sink16
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Info] Inserting clock-crossing logic between rsp_xbar_demux_017.src0 and rsp_xbar_mux_001.sink17
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Info] Inserting clock-crossing logic between rsp_xbar_demux_027.src0 and rsp_xbar_mux_001.sink27
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:51 [Info] com_altera_sopcmodel_transforms_avalon_ClockCrossingTransform: After transform: <b>237</b> modules, <b>828</b> connections
+2013.01.22.22:35:51 [Debug] Transform: PipelineTransform
+2013.01.22.22:35:51 [Debug] Transform: TrafficLimiterUpdateTransform
+2013.01.22.22:35:51 [Debug] Transform: InterruptMapperTransform
+2013.01.22.22:35:51 [Progress] min: 0
+2013.01.22.22:35:51 [Progress] max: 1
+2013.01.22.22:35:51 [Progress] current: 1
+2013.01.22.22:35:52 [Info] merlin_interrupt_mapper_transform: After transform: <b>238</b> modules, <b>831</b> connections
+2013.01.22.22:35:52 [Debug] Transform: InterruptSyncTransform
+2013.01.22.22:35:52 [Progress] min: 0
+2013.01.22.22:35:52 [Progress] max: 1
+2013.01.22.22:35:52 [Progress] current: 1
+2013.01.22.22:35:52 [Progress] min: 0
+2013.01.22.22:35:52 [Progress] max: 1
+2013.01.22.22:35:52 [Progress] current: 1
+2013.01.22.22:35:52 [Progress] min: 0
+2013.01.22.22:35:52 [Progress] max: 1
+2013.01.22.22:35:52 [Progress] current: 1
+2013.01.22.22:35:52 [Info] merlin_interrupt_sync_transform: After transform: <b>241</b> modules, <b>846</b> connections
+2013.01.22.22:35:52 [Debug] Transform: InterruptFanoutTransform
+2013.01.22.22:35:53 [Warning] system: "No matching role found for epcs:epcs_control_port:endofpacket (endofpacket)"
+2013.01.22.22:35:53 [Warning] system: "No matching role found for epcs:epcs_control_port:dataavailable (dataavailable)"
+2013.01.22.22:35:53 [Warning] system: "No matching role found for epcs:epcs_control_port:readyfordata (readyfordata)"
+2013.01.22.22:35:53 [Warning] system: "No matching role found for jtag_uart:avalon_jtag_slave:dataavailable (dataavailable)"
+2013.01.22.22:35:53 [Warning] system: "No matching role found for jtag_uart:avalon_jtag_slave:readyfordata (readyfordata)"
+2013.01.22.22:35:53 [Warning] system: "No matching role found for st_current_sensor:spi_control_port:endofpacket (endofpacket)"
+2013.01.22.22:35:53 [Warning] system: "No matching role found for st_current_sensor:spi_control_port:dataavailable (dataavailable)"
+2013.01.22.22:35:53 [Warning] system: "No matching role found for st_current_sensor:spi_control_port:readyfordata (readyfordata)"
+2013.01.22.22:35:53 [Warning] system: "No matching role found for uart_0:s1:dataavailable (dataavailable)"
+2013.01.22.22:35:53 [Warning] system: "No matching role found for uart_0:s1:readyfordata (readyfordata)"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_jtag_uart</b> "<b>submodules/BeInMotion_qsys_jtag_uart</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_onchip_memory2</b> "<b>submodules/BeInMotion_qsys_onchip_ram</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_nios2_qsys</b> "<b>submodules/BeInMotion_qsys_cpu</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_timer</b> "<b>submodules/BeInMotion_qsys_timer</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/BeInMotion_qsys_user_io</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/BeInMotion_qsys_user_led</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/BeInMotion_qsys_pb</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/BeInMotion_qsys_bat_cc_al_n</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/BeInMotion_qsys_ir_led1</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/BeInMotion_qsys_ir_led1</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_spi</b> "<b>submodules/BeInMotion_qsys_st_current_sensor</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/BeInMotion_qsys_ps_din</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/BeInMotion_qsys_ir_led1</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/BeInMotion_qsys_ir_led1</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_epcs_flash_controller</b> "<b>submodules/BeInMotion_qsys_epcs</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altpll</b> "<b>submodules/BeInMotion_qsys_pll</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>ir_receiver</b> "<b>submodules/ir_receiver</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>ir_receiver</b> "<b>submodules/ir_receiver</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>DC_Motor_Controller</b> "<b>submodules/pwm_avalon_interface</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>DC_Motor_Controller</b> "<b>submodules/pwm_avalon_interface</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>DC_Motor_Controller</b> "<b>submodules/pwm_avalon_interface</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>DC_Motor_Controller</b> "<b>submodules/pwm_avalon_interface</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>i2c_master_top</b> "<b>submodules/i2c_master_top</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>i2c_master_top</b> "<b>submodules/i2c_master_top</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>pid_controller_top</b> "<b>submodules/pid_controller_top</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>pid_controller_top</b> "<b>submodules/pid_controller_top</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sysid_qsys</b> "<b>submodules/BeInMotion_qsys_sysid</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>st_motor_top</b> "<b>submodules/st_motor_top</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_uart</b> "<b>submodules/BeInMotion_qsys_uart_0</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_master_agent</b> "<b>submodules/altera_merlin_master_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_master_agent</b> "<b>submodules/altera_merlin_master_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:53 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_addr_router</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_addr_router_001</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_router</b> "<b>submodules/BeInMotion_qsys_id_router_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_cmd_xbar_demux</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_cmd_xbar_demux_001</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/BeInMotion_qsys_cmd_xbar_mux</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/BeInMotion_qsys_cmd_xbar_mux</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/BeInMotion_qsys_cmd_xbar_mux</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_demux_003</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_mux</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/BeInMotion_qsys_rsp_xbar_mux_001</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_st_handshake_clock_crosser</b> "<b>submodules/altera_avalon_st_handshake_clock_crosser</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_st_handshake_clock_crosser</b> "<b>submodules/altera_avalon_st_handshake_clock_crosser</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_st_handshake_clock_crosser</b> "<b>submodules/altera_avalon_st_handshake_clock_crosser</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_st_handshake_clock_crosser</b> "<b>submodules/altera_avalon_st_handshake_clock_crosser</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_st_handshake_clock_crosser</b> "<b>submodules/altera_avalon_st_handshake_clock_crosser</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_st_handshake_clock_crosser</b> "<b>submodules/altera_avalon_st_handshake_clock_crosser</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_st_handshake_clock_crosser</b> "<b>submodules/altera_avalon_st_handshake_clock_crosser</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_avalon_st_handshake_clock_crosser</b> "<b>submodules/altera_avalon_st_handshake_clock_crosser</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_irq_mapper</b> "<b>submodules/BeInMotion_qsys_irq_mapper</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_irq_clock_crosser</b> "<b>submodules/altera_irq_clock_crosser</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_irq_clock_crosser</b> "<b>submodules/altera_irq_clock_crosser</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: "<b>BeInMotion_qsys</b>" reuses <b>altera_irq_clock_crosser</b> "<b>submodules/altera_irq_clock_crosser</b>"
+2013.01.22.22:35:54 [Debug] BeInMotion_qsys: queue size: 211 starting:altera_avalon_jtag_uart "submodules/BeInMotion_qsys_jtag_uart"
+2013.01.22.22:35:54 [Info] Starting classic module elaboration.
+2013.01.22.22:35:57 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0005_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0005_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:35:59 [Info] Finished elaborating classic module.
+2013.01.22.22:35:59 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0005_sopclgen/yysystem.ptf
+2013.01.22.22:35:59 [Info] Running sopc_builder...
+2013.01.22.22:36:02 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0005_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0005_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:36:04 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:36:04 [Progress] .
+2013.01.22.22:36:05 [Progress] # 2013.01.22 22:36:05 (*) Success: sopc_builder finished.
+2013.01.22.22:36:06 [Info] jtag_uart: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_jtag_uart</b> "<b>jtag_uart</b>"
+2013.01.22.22:36:06 [Debug] BeInMotion_qsys: queue size: 210 starting:altera_avalon_onchip_memory2 "submodules/BeInMotion_qsys_onchip_ram"
+2013.01.22.22:36:06 [Info] Starting classic module elaboration.
+2013.01.22.22:36:08 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0006_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0006_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:36:10 [Info] Finished elaborating classic module.
+2013.01.22.22:36:10 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0006_sopclgen/yysystem.ptf
+2013.01.22.22:36:10 [Info] Running sopc_builder...
+2013.01.22.22:36:13 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0006_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0006_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:36:15 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:36:15 [Progress] .
+2013.01.22.22:36:17 [Progress] # 2013.01.22 22:36:17 (*) Success: sopc_builder finished.
+2013.01.22.22:36:17 [Info] onchip_ram: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_onchip_memory2</b> "<b>onchip_ram</b>"
+2013.01.22.22:36:17 [Debug] BeInMotion_qsys: queue size: 209 starting:altera_nios2_qsys "submodules/BeInMotion_qsys_cpu"
+2013.01.22.22:36:17 [Info] cpu: Starting RTL generation for module 'BeInMotion_qsys_cpu'
+2013.01.22.22:36:17 [Info] cpu:   Generation command is [exec C:/altera/11.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/11.1sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/11.1sp1/quartus/sopc_builder/bin/europa -I C:/altera/11.1sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/11.1sp1/quartus/sopc_builder/bin -I C:/altera/11.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/11.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/11.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/11.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/11.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=BeInMotion_qsys_cpu --dir=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0007_cpu_gen/ --quartus_dir=C:/altera/11.1sp1/quartus --verilog --config=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0007_cpu_gen//BeInMotion_qsys_cpu_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+2013.01.22.22:36:22 [Info] cpu: # 2013.01.22 22:36:18 (*) Starting Nios II generation
+2013.01.22.22:36:22 [Info] cpu: # 2013.01.22 22:36:18 (*)   No license required to generate encrypted Nios II/e.
+2013.01.22.22:36:22 [Info] cpu: # 2013.01.22 22:36:18 (*)   Elaborating CPU configuration settings
+2013.01.22.22:36:22 [Info] cpu: # 2013.01.22 22:36:18 (*)   Creating all objects for CPU
+2013.01.22.22:36:22 [Info] cpu: # 2013.01.22 22:36:20 (*)   Generating RTL from CPU objects
+2013.01.22.22:36:22 [Info] cpu: # 2013.01.22 22:36:20 (*)   Creating plain-text RTL
+2013.01.22.22:36:22 [Info] cpu: # 2013.01.22 22:36:22 (*) Done Nios II generation
+2013.01.22.22:36:22 [Info] cpu: Done RTL generation for module 'BeInMotion_qsys_cpu'
+2013.01.22.22:36:22 [Info] cpu: "<b>BeInMotion_qsys</b>" instantiated <b>altera_nios2_qsys</b> "<b>cpu</b>"
+2013.01.22.22:36:22 [Debug] BeInMotion_qsys: queue size: 208 starting:altera_avalon_timer "submodules/BeInMotion_qsys_timer"
+2013.01.22.22:36:22 [Info] Starting classic module elaboration.
+2013.01.22.22:36:24 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0008_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0008_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:36:27 [Info] Finished elaborating classic module.
+2013.01.22.22:36:27 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0008_sopclgen/yysystem.ptf
+2013.01.22.22:36:27 [Info] Running sopc_builder...
+2013.01.22.22:36:29 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0008_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0008_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:36:31 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:36:31 [Progress] .
+2013.01.22.22:36:33 [Progress] # 2013.01.22 22:36:32 (*) Success: sopc_builder finished.
+2013.01.22.22:36:33 [Info] timer: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_timer</b> "<b>timer</b>"
+2013.01.22.22:36:33 [Debug] BeInMotion_qsys: queue size: 207 starting:altera_avalon_pio "submodules/BeInMotion_qsys_user_io"
+2013.01.22.22:36:33 [Info] Starting classic module elaboration.
+2013.01.22.22:36:36 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0009_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0009_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:36:38 [Info] Finished elaborating classic module.
+2013.01.22.22:36:38 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0009_sopclgen/yysystem.ptf
+2013.01.22.22:36:38 [Info] Running sopc_builder...
+2013.01.22.22:36:40 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0009_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0009_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:36:42 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:36:43 [Progress] .
+2013.01.22.22:36:44 [Progress] # 2013.01.22 22:36:44 (*) Success: sopc_builder finished.
+2013.01.22.22:36:44 [Info] user_io: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_pio</b> "<b>user_io</b>"
+2013.01.22.22:36:44 [Debug] BeInMotion_qsys: queue size: 206 starting:altera_avalon_pio "submodules/BeInMotion_qsys_user_led"
+2013.01.22.22:36:44 [Info] Starting classic module elaboration.
+2013.01.22.22:36:47 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0010_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0010_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:36:49 [Info] Finished elaborating classic module.
+2013.01.22.22:36:49 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0010_sopclgen/yysystem.ptf
+2013.01.22.22:36:49 [Info] Running sopc_builder...
+2013.01.22.22:36:52 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0010_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0010_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:36:54 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:36:54 [Progress] .
+2013.01.22.22:36:56 [Progress] # 2013.01.22 22:36:55 (*) Success: sopc_builder finished.
+2013.01.22.22:36:56 [Info] user_led: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_pio</b> "<b>user_led</b>"
+2013.01.22.22:36:56 [Debug] BeInMotion_qsys: queue size: 205 starting:altera_avalon_pio "submodules/BeInMotion_qsys_pb"
+2013.01.22.22:36:56 [Info] Starting classic module elaboration.
+2013.01.22.22:36:59 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0011_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0011_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:37:01 [Info] Finished elaborating classic module.
+2013.01.22.22:37:01 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0011_sopclgen/yysystem.ptf
+2013.01.22.22:37:01 [Info] Running sopc_builder...
+2013.01.22.22:37:04 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0011_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0011_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:37:05 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:37:06 [Progress] .
+2013.01.22.22:37:07 [Progress] # 2013.01.22 22:37:07 (*) Success: sopc_builder finished.
+2013.01.22.22:37:07 [Info] pb: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_pio</b> "<b>pb</b>"
+2013.01.22.22:37:07 [Debug] BeInMotion_qsys: queue size: 204 starting:altera_avalon_pio "submodules/BeInMotion_qsys_bat_cc_al_n"
+2013.01.22.22:37:07 [Info] Starting classic module elaboration.
+2013.01.22.22:37:10 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0012_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0012_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:37:12 [Info] Finished elaborating classic module.
+2013.01.22.22:37:12 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0012_sopclgen/yysystem.ptf
+2013.01.22.22:37:12 [Info] Running sopc_builder...
+2013.01.22.22:37:15 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0012_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0012_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:37:17 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:37:17 [Progress] .
+2013.01.22.22:37:18 [Progress] # 2013.01.22 22:37:18 (*) Success: sopc_builder finished.
+2013.01.22.22:37:19 [Info] bat_cc_al_n: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_pio</b> "<b>bat_cc_al_n</b>"
+2013.01.22.22:37:19 [Debug] BeInMotion_qsys: queue size: 203 starting:altera_avalon_pio "submodules/BeInMotion_qsys_ir_led1"
+2013.01.22.22:37:19 [Info] Starting classic module elaboration.
+2013.01.22.22:37:21 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0013_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0013_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:37:23 [Info] Finished elaborating classic module.
+2013.01.22.22:37:23 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0013_sopclgen/yysystem.ptf
+2013.01.22.22:37:23 [Info] Running sopc_builder...
+2013.01.22.22:37:26 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0013_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0013_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:37:28 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:37:28 [Progress] .
+2013.01.22.22:37:29 [Progress] # 2013.01.22 22:37:29 (*) Success: sopc_builder finished.
+2013.01.22.22:37:30 [Info] ir_led1: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_pio</b> "<b>ir_led1</b>"
+2013.01.22.22:37:30 [Debug] BeInMotion_qsys: queue size: 201 starting:altera_avalon_spi "submodules/BeInMotion_qsys_st_current_sensor"
+2013.01.22.22:37:30 [Info] Starting classic module elaboration.
+2013.01.22.22:37:33 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0014_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0014_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:37:35 [Info] Finished elaborating classic module.
+2013.01.22.22:37:35 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0014_sopclgen/yysystem.ptf
+2013.01.22.22:37:35 [Info] Running sopc_builder...
+2013.01.22.22:37:38 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0014_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0014_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:37:40 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:37:40 [Progress] .
+2013.01.22.22:37:41 [Progress] # 2013.01.22 22:37:41 (*) Success: sopc_builder finished.
+2013.01.22.22:37:42 [Info] st_current_sensor: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_spi</b> "<b>st_current_sensor</b>"
+2013.01.22.22:37:42 [Debug] BeInMotion_qsys: queue size: 200 starting:altera_avalon_pio "submodules/BeInMotion_qsys_ps_din"
+2013.01.22.22:37:42 [Info] Starting classic module elaboration.
+2013.01.22.22:37:44 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0015_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0015_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:37:46 [Info] Finished elaborating classic module.
+2013.01.22.22:37:46 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0015_sopclgen/yysystem.ptf
+2013.01.22.22:37:46 [Info] Running sopc_builder...
+2013.01.22.22:37:49 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0015_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0015_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:37:51 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:37:51 [Progress] .
+2013.01.22.22:37:52 [Progress] # 2013.01.22 22:37:52 (*) Success: sopc_builder finished.
+2013.01.22.22:37:53 [Info] ps_din: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_pio</b> "<b>ps_din</b>"
+2013.01.22.22:37:53 [Debug] BeInMotion_qsys: queue size: 197 starting:altera_avalon_epcs_flash_controller "submodules/BeInMotion_qsys_epcs"
+2013.01.22.22:37:53 [Info] Starting classic module elaboration.
+2013.01.22.22:37:56 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0016_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0016_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:37:59 [Info] Finished elaborating classic module.
+2013.01.22.22:37:59 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0016_sopclgen/yysystem.ptf
+2013.01.22.22:37:59 [Info] Running sopc_builder...
+2013.01.22.22:38:01 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0016_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0016_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:38:03 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:38:03 [Progress] .
+2013.01.22.22:38:05 [Progress] # 2013.01.22 22:38:05 (*) Success: sopc_builder finished.
+2013.01.22.22:38:06 [Info] epcs: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_epcs_flash_controller</b> "<b>epcs</b>"
+2013.01.22.22:38:06 [Debug] BeInMotion_qsys: queue size: 196 starting:altpll "submodules/BeInMotion_qsys_pll"
+2013.01.22.22:38:06 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2013.01.22.22:38:06 [Debug] Command: C:/altera/11.1sp1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0017_sopcgen/BeInMotion_qsys_pll.v --source=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0017_sopcgen/BeInMotion_qsys_pll.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0018_sopcqmap/
+2013.01.22.22:38:07 [Debug] Command took 1.326s
+2013.01.22.22:38:07 [Info] pll: "<b>BeInMotion_qsys</b>" instantiated <b>altpll</b> "<b>pll</b>"
+2013.01.22.22:38:07 [Debug] BeInMotion_qsys: queue size: 195 starting:ir_receiver "submodules/ir_receiver"
+2013.01.22.22:38:07 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2013.01.22.22:38:07 [Debug] Command: C:/altera/11.1sp1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/dev_beinmotion/BeInMotion_lab/ip/ir_receiver/ir_recever.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/ir_receiver/ir_recever.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0019_sopcqmap/
+2013.01.22.22:38:08 [Debug] Command took 1.336s
+2013.01.22.22:38:08 [Info] ir_rx1: "<b>BeInMotion_qsys</b>" instantiated <b>ir_receiver</b> "<b>ir_rx1</b>"
+2013.01.22.22:38:08 [Debug] BeInMotion_qsys: queue size: 193 starting:DC_Motor_Controller "submodules/pwm_avalon_interface"
+2013.01.22.22:35:40 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2013.01.22.22:35:40 [Debug] Command: C:/altera/11.1sp1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/dev_beinmotion/BeInMotion_lab/ip/pwm/hdl/pwm_avalon_interface.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/pwm/hdl/pwm_register_file.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/pwm/hdl/pwm_task_logic.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/pwm/hdl/pwm_avalon_interface.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0001_sopcqmap/
+2013.01.22.22:35:41 [Debug] Command took 1.321s
+2013.01.22.22:38:08 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2013.01.22.22:38:08 [Debug] Command: C:/altera/11.1sp1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=C:\dev_beinmotion\BeInMotion_lab\ip\pwm\hdl\pwm_avalon_interface.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/pwm/hdl/pwm_register_file.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/pwm/hdl/pwm_task_logic.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/pwm/hdl/pwm_avalon_interface.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0020_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=pwm_avalon_interface "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=clock_divide_reg_init=B\"0000000000000000000000000000000000\";duty_cycle_reg_init=B\"0000000000000000000000000000000000\";"
+2013.01.22.22:38:10 [Debug] Command took 1.314s
+2013.01.22.22:38:10 [Info] dc1_pwm2: "<b>BeInMotion_qsys</b>" instantiated <b>DC_Motor_Controller</b> "<b>dc1_pwm2</b>"
+2013.01.22.22:38:10 [Debug] BeInMotion_qsys: queue size: 189 starting:i2c_master_top "submodules/i2c_master_top"
+2013.01.22.22:35:41 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2013.01.22.22:35:41 [Debug] Command: C:/altera/11.1sp1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/dev_beinmotion/BeInMotion_lab/ip/opencore_i2c/hdl/i2c_master_top.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/opencore_i2c/hdl/i2c_master_bit_ctrl.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/opencore_i2c/hdl/i2c_master_byte_ctrl.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/opencore_i2c/hdl/i2c_master_top.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0002_sopcqmap/
+2013.01.22.22:35:42 [Debug] Command took 1.313s
+2013.01.22.22:38:10 [Info] bat_gas_gauge: "<b>BeInMotion_qsys</b>" instantiated <b>i2c_master_top</b> "<b>bat_gas_gauge</b>"
+2013.01.22.22:38:10 [Debug] BeInMotion_qsys: queue size: 187 starting:pid_controller_top "submodules/pid_controller_top"
+2013.01.22.22:35:42 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2013.01.22.22:35:42 [Debug] Command: C:/altera/11.1sp1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/dev_beinmotion/BeInMotion_lab/ip/PID/hdl/pid_controller_top.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/PID/hdl/pid_controller.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/PID/hdl/pid_controller_top.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0003_sopcqmap/
+2013.01.22.22:35:44 [Debug] Command took 1.323s
+2013.01.22.22:38:10 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2013.01.22.22:38:10 [Debug] Command: C:/altera/11.1sp1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=C:\dev_beinmotion\BeInMotion_lab\ip\PID\hdl\pid_controller_top.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/PID/hdl/pid_controller.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/PID/hdl/pid_controller_top.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0021_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=pid_controller_top "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=Max=B\"0000000000000000001111111111111111\";Min=B\"0000000000000000000000000000000000\";"
+2013.01.22.22:38:11 [Debug] Command took 1.303s
+2013.01.22.22:38:11 [Info] pid_con_m1: "<b>BeInMotion_qsys</b>" instantiated <b>pid_controller_top</b> "<b>pid_con_m1</b>"
+2013.01.22.22:38:11 [Debug] BeInMotion_qsys: queue size: 185 starting:altera_avalon_sysid_qsys "submodules/BeInMotion_qsys_sysid"
+2013.01.22.22:38:11 [Info] sysid: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_sysid_qsys</b> "<b>sysid</b>"
+2013.01.22.22:38:11 [Debug] BeInMotion_qsys: queue size: 184 starting:st_motor_top "submodules/st_motor_top"
+2013.01.22.22:35:44 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2013.01.22.22:35:44 [Debug] Command: C:/altera/11.1sp1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/dev_beinmotion/BeInMotion_lab/ip/stepper_motor/hdl/st_motor_top.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/stepper_motor/hdl/st_motor_top.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0004_sopcqmap/
+2013.01.22.22:35:45 [Debug] Command took 1.314s
+2013.01.22.22:38:11 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2013.01.22.22:38:11 [Debug] Command: C:/altera/11.1sp1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=C:\dev_beinmotion\BeInMotion_lab\ip\stepper_motor\hdl\st_motor_top.v --source=C:/dev_beinmotion/BeInMotion_lab/ip/stepper_motor/hdl/st_motor_top.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0023_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=st_motor_top "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=IDLE=B\"0000\";WAVE=B\"0001\";HALF=B\"0010\";FULL=B\"0011\";MICRO=B\"0100\";WAVE_MODE1=B\"000\";WAVE_MODE2=B\"001\";WAVE_MODE3=B\"010\";WAVE_MODE4=B\"011\";FULL_MODE1=B\"000\";FULL_MODE2=B\"001\";FULL_MODE3=B\"010\";FULL_MODE4=B\"011\";HALF_MODE1=B\"0000\";HALF_MODE2=B\"0001\";HALF_MODE3=B\"0010\";HALF_MODE4=B\"0011\";HALF_MODE5=B\"0100\";HALF_MODE6=B\"0101\";HALF_MODE7=B\"0110\";HALF_MODE8=B\"0111\";MICRO_MODE1=B\"000\";MICRO_MODE2=B\"001\";MICRO_MODE3=B\"010\";MICRO_MODE4=B\"011\";"
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(107): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(108): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(109): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(110): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(111): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(113): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(114): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(115): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(116): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(118): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(119): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(120): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(121): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(123): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(124): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(125): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(126): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(127): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(128): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(129): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(130): truncated value with size 4 to match size of target (3)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(132): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(133): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(134): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Warning] Verilog HDL assignment warning at st_motor_top.v(135): truncated value with size 3 to match size of target (2)
+2013.01.22.22:38:13 [Debug] Command took 1.358s
+2013.01.22.22:38:13 [Info] stpr_motor_cntrl: "<b>BeInMotion_qsys</b>" instantiated <b>st_motor_top</b> "<b>stpr_motor_cntrl</b>"
+2013.01.22.22:38:13 [Debug] BeInMotion_qsys: queue size: 183 starting:altera_avalon_uart "submodules/BeInMotion_qsys_uart_0"
+2013.01.22.22:38:13 [Info] Starting classic module elaboration.
+2013.01.22.22:38:15 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0024_sopclgen  --no_splash --refresh C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0024_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:38:17 [Info] Finished elaborating classic module.
+2013.01.22.22:38:17 [Progress] Executing: C:/altera/11.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0024_sopclgen/yysystem.ptf
+2013.01.22.22:38:17 [Info] Running sopc_builder...
+2013.01.22.22:38:20 [Progress] "c:/altera/11.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0024_sopclgen  --generate C:/Users/rdutt/AppData/Local/Temp/alt5728_2840023594511269492.dir/0024_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1sp1/quartus" --sopc_perl="c:/altera/11.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1sp1/quartus/../ip/altera/nios2_ip"
+2013.01.22.22:38:22 [Progress] No .sopc_builder configuration file(!)
+2013.01.22.22:38:22 [Progress] .
+2013.01.22.22:38:24 [Progress] # 2013.01.22 22:38:24 (*) Success: sopc_builder finished.
+2013.01.22.22:38:25 [Info] uart_0: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_uart</b> "<b>uart_0</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 182 starting:altera_merlin_master_translator "submodules/altera_merlin_master_translator"
+2013.01.22.22:38:25 [Info] cpu_instruction_master_translator: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_master_translator</b> "<b>cpu_instruction_master_translator</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 180 starting:altera_merlin_slave_translator "submodules/altera_merlin_slave_translator"
+2013.01.22.22:38:25 [Info] cpu_jtag_debug_module_translator: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_slave_translator</b> "<b>cpu_jtag_debug_module_translator</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 150 starting:altera_merlin_slave_agent "submodules/altera_merlin_slave_agent"
+2013.01.22.22:38:25 [Info] pid_con_m1_avalon_slave_0_translator_avalon_universal_slave_0_agent: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_slave_agent</b> "<b>pid_con_m1_avalon_slave_0_translator_avalon_universal_slave_0_agent</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 149 starting:altera_avalon_sc_fifo "submodules/altera_avalon_sc_fifo"
+2013.01.22.22:38:25 [Info] pid_con_m1_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_sc_fifo</b> "<b>pid_con_m1_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 108 starting:altera_merlin_master_agent "submodules/altera_merlin_master_agent"
+2013.01.22.22:38:25 [Info] cpu_data_master_translator_avalon_universal_master_0_agent: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_master_agent</b> "<b>cpu_data_master_translator_avalon_universal_master_0_agent</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 84 starting:altera_merlin_router "submodules/BeInMotion_qsys_addr_router"
+2013.01.22.22:38:25 [Info] addr_router: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_router</b> "<b>addr_router</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 83 starting:altera_merlin_router "submodules/BeInMotion_qsys_addr_router_001"
+2013.01.22.22:38:25 [Info] addr_router_001: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_router</b> "<b>addr_router_001</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 82 starting:altera_merlin_router "submodules/BeInMotion_qsys_id_router"
+2013.01.22.22:38:25 [Info] id_router: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_router</b> "<b>id_router</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 79 starting:altera_merlin_router "submodules/BeInMotion_qsys_id_router_003"
+2013.01.22.22:38:25 [Info] id_router_003: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_router</b> "<b>id_router_003</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 52 starting:altera_reset_controller "submodules/altera_reset_controller"
+2013.01.22.22:38:25 [Info] rst_controller: "<b>BeInMotion_qsys</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 48 starting:altera_merlin_demultiplexer "submodules/BeInMotion_qsys_cmd_xbar_demux"
+2013.01.22.22:38:25 [Info] cmd_xbar_demux: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>cmd_xbar_demux</b>"
+2013.01.22.22:38:25 [Debug] BeInMotion_qsys: queue size: 47 starting:altera_merlin_demultiplexer "submodules/BeInMotion_qsys_cmd_xbar_demux_001"
+2013.01.22.22:38:26 [Info] cmd_xbar_demux_001: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>cmd_xbar_demux_001</b>"
+2013.01.22.22:38:26 [Debug] BeInMotion_qsys: queue size: 46 starting:altera_merlin_multiplexer "submodules/BeInMotion_qsys_cmd_xbar_mux"
+2013.01.22.22:38:26 [Info] cmd_xbar_mux: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>cmd_xbar_mux</b>"
+2013.01.22.22:38:26 [Debug] BeInMotion_qsys: queue size: 43 starting:altera_merlin_demultiplexer "submodules/BeInMotion_qsys_rsp_xbar_demux"
+2013.01.22.22:38:26 [Info] rsp_xbar_demux: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>rsp_xbar_demux</b>"
+2013.01.22.22:38:26 [Debug] BeInMotion_qsys: queue size: 40 starting:altera_merlin_demultiplexer "submodules/BeInMotion_qsys_rsp_xbar_demux_003"
+2013.01.22.22:38:26 [Info] rsp_xbar_demux_003: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>rsp_xbar_demux_003</b>"
+2013.01.22.22:38:26 [Debug] BeInMotion_qsys: queue size: 13 starting:altera_merlin_multiplexer "submodules/BeInMotion_qsys_rsp_xbar_mux"
+2013.01.22.22:38:26 [Info] rsp_xbar_mux: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>rsp_xbar_mux</b>"
+2013.01.22.22:38:26 [Info] Reusing file <b>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_merlin_arbitrator.sv</b>
+2013.01.22.22:38:26 [Debug] BeInMotion_qsys: queue size: 12 starting:altera_merlin_multiplexer "submodules/BeInMotion_qsys_rsp_xbar_mux_001"
+2013.01.22.22:38:26 [Info] rsp_xbar_mux_001: "<b>BeInMotion_qsys</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>rsp_xbar_mux_001</b>"
+2013.01.22.22:38:26 [Info] Reusing file <b>C:/dev_beinmotion/BeInMotion_lab/db/ip/BeInMotion_qsys/submodules/altera_merlin_arbitrator.sv</b>
+2013.01.22.22:38:26 [Debug] BeInMotion_qsys: queue size: 11 starting:altera_avalon_st_handshake_clock_crosser "submodules/altera_avalon_st_handshake_clock_crosser"
+2013.01.22.22:38:26 [Info] crosser: "<b>BeInMotion_qsys</b>" instantiated <b>altera_avalon_st_handshake_clock_crosser</b> "<b>crosser</b>"
+2013.01.22.22:38:26 [Debug] BeInMotion_qsys: queue size: 3 starting:altera_irq_mapper "submodules/BeInMotion_qsys_irq_mapper"
+2013.01.22.22:38:26 [Info] irq_mapper: "<b>BeInMotion_qsys</b>" instantiated <b>altera_irq_mapper</b> "<b>irq_mapper</b>"
+2013.01.22.22:38:26 [Debug] BeInMotion_qsys: queue size: 2 starting:altera_irq_clock_crosser "submodules/altera_irq_clock_crosser"
+2013.01.22.22:38:26 [Info] irq_synchronizer: "<b>BeInMotion_qsys</b>" instantiated <b>altera_irq_clock_crosser</b> "<b>irq_synchronizer</b>"
+2013.01.22.22:38:26 [Info] BeInMotion_qsys: Done <b>BeInMotion_qsys</b>" with 41 modules, 301 files, 5063389 bytes
+</div>
+  <div style="width:100% ; background:#eee ; height:10px"> </div>
+ </body>
+</html>

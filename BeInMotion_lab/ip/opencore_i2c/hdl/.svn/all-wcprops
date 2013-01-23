@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/altra-p-bmsob-motcon/!svn/ver/149/trunk/soc/rtl/opencore_i2c/hdl
+END
+i2c_master_byte_ctrl.v
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/altra-p-bmsob-motcon/!svn/ver/149/trunk/soc/rtl/opencore_i2c/hdl/i2c_master_byte_ctrl.v
+END
+i2c_master_bit_ctrl.v
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/altra-p-bmsob-motcon/!svn/ver/149/trunk/soc/rtl/opencore_i2c/hdl/i2c_master_bit_ctrl.v
+END
+i2c_master_top.v
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/altra-p-bmsob-motcon/!svn/ver/149/trunk/soc/rtl/opencore_i2c/hdl/i2c_master_top.v
+END

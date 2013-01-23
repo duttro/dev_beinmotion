@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="BeInMotion">
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|BeInMotion_qsys_jtag_uart:jtag_uart|BeInMotion_qsys_jtag_uart_scfifo_r:the_BeInMotion_qsys_jtag_uart_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_jr21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|BeInMotion_qsys_cpu:cpu|BeInMotion_qsys_cpu_register_bank_b_module:BeInMotion_qsys_cpu_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_51h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|pid_controller_top:pid_con_m2|pid_controller:p1|lpm_mult:Mult2" CBX_FILE_NAME="mult_7dt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|BeInMotion_qsys_onchip_ram:onchip_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_1gd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|pid_controller_top:pid_con_m1|pid_controller:p1|lpm_mult:Mult0" CBX_FILE_NAME="mult_7dt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|lpm_counter0:b2v_inst1|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_tqh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|BeInMotion_qsys_cpu:cpu|BeInMotion_qsys_cpu_nios2_oci:the_BeInMotion_qsys_cpu_nios2_oci|BeInMotion_qsys_cpu_nios2_oci_im:the_BeInMotion_qsys_cpu_nios2_oci_im|BeInMotion_qsys_cpu_traceram_lpm_dram_bdp_component_module:BeInMotion_qsys_cpu_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_0a02.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|BeInMotion_qsys_cpu:cpu|BeInMotion_qsys_cpu_nios2_oci:the_BeInMotion_qsys_cpu_nios2_oci|BeInMotion_qsys_cpu_nios2_ocimem:the_BeInMotion_qsys_cpu_nios2_ocimem|BeInMotion_qsys_cpu_ociram_lpm_dram_bdp_component_module:BeInMotion_qsys_cpu_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_hr82.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|BeInMotion_qsys_cpu:cpu|BeInMotion_qsys_cpu_register_bank_a_module:BeInMotion_qsys_cpu_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_41h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|BeInMotion_qsys_jtag_uart:jtag_uart|BeInMotion_qsys_jtag_uart_scfifo_w:the_BeInMotion_qsys_jtag_uart_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_jr21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|pid_controller_top:pid_con_m1|pid_controller:p1|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_pvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|pid_controller_top:pid_con_m1|pid_controller:p1|lpm_mult:Mult1" CBX_FILE_NAME="mult_7dt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|pid_controller_top:pid_con_m2|pid_controller:p1|lpm_mult:Mult0" CBX_FILE_NAME="mult_7dt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|BeInMotion_qsys_epcs:epcs|altsyncram:the_boot_copier_rom" CBX_FILE_NAME="altsyncram_u251.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|pid_controller_top:pid_con_m1|pid_controller:p1|lpm_mult:Mult2" CBX_FILE_NAME="mult_7dt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|pid_controller_top:pid_con_m2|pid_controller:p1|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_pvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|BeInMotion|BeInMotion_qsys:b2v_inst|pid_controller_top:pid_con_m2|pid_controller:p1|lpm_mult:Mult1" CBX_FILE_NAME="mult_7dt.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
