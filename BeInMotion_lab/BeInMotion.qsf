@@ -63,10 +63,10 @@ set_location_assignment PIN_P11 -to gauge_cc_al_n
 set_location_assignment PIN_J13 -to user_led[0]
 set_location_assignment PIN_T10 -to user_led[1]
 set_location_assignment PIN_T11 -to user_led[2]
-set_location_assignment PIN_P14 -to gpio[0]
-set_location_assignment PIN_N14 -to gpio[1]
-set_location_assignment PIN_G1 -to gpio[2]
-set_location_assignment PIN_L14 -to gpio[3]
+set_location_assignment PIN_P14 -to gpio[0] -disable
+set_location_assignment PIN_N14 -to gpio[1] -disable
+set_location_assignment PIN_G1 -to gpio[2] -disable
+set_location_assignment PIN_L14 -to gpio[3] -disable
 set_location_assignment PIN_N11 -to gpio[4]
 set_location_assignment PIN_N12 -to gpio[5]
 set_location_assignment PIN_G2 -to gpio[6]
@@ -142,4 +142,8 @@ set_global_assignment -name CYCLONEIII_CONFIGURATION_DEVICE EPCS16
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_P14 -to uart_0_rxd
+set_location_assignment PIN_N14 -to uart_0_txd
+set_location_assignment PIN_G1 -to uart_0_rts_n
+set_location_assignment PIN_L14 -to uart_0_cts_n
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

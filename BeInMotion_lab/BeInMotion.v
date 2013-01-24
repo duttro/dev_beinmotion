@@ -50,7 +50,11 @@ module BeInMotion(
 	gpio,
 	lcd_d,
 	user_led,
-	stm_out
+	stm_out,
+	uart_0_rxd,
+   uart_0_txd,
+   uart_0_cts_n,
+   uart_0_rts_n
 );
 
 
@@ -89,6 +93,12 @@ inout wire	[7:0] lcd_d;
 output wire	[2:0] user_led;
 output wire [3:0] stm_out;
 
+// added ports for new uart
+input  wire       uart_0_rxd;   // uart_0_external_connection.rxd
+output wire       uart_0_txd;   //                           .txd
+input  wire       uart_0_cts_n; //                           .cts_n
+output wire       uart_0_rts_n; //                           .rts_n
+
 wire	[15:0] cnt;
 wire	dc1_pwm1;
 wire	dc1_pwm2;
@@ -125,24 +135,24 @@ wire    [3:0] stm_out1;
 assign	dc_psave = 0;
 
 BeInMotion_qsys	b2v_inst(
-          // Clock & Reset
-	.clk_clk				( osc_clk		),
-	.reset_reset_n				( sys_reset_n		),
+   // Clock & Reset
+	.clk_clk				         ( osc_clk		),
+	.reset_reset_n				   ( sys_reset_n		),
 	.pll_locked_export			( pll_locked		),
 	
  	 // DC Motor-1 Interface
- 	.ir_rx1_conduit_end_export		( ir_rx1		),
+ 	.ir_rx1_conduit_end_export	( ir_rx1		),
  	.ir_led1_export				( ir_led1		),
  	
- 	.dc1_pwm2_export			( dc1_pwm2		),
+ 	.dc1_pwm2_export			   ( dc1_pwm2		),
  	.dc1_pwm1_1_export			( dc1_pwm1		),
  	 
  	 
  	 // DC Motor-2 Interface
-        .ir_led2_export				( ir_led2		),
- 	.ir_rx2_conduit_end_export		( ir_rx2		),
- 	.dc2_pwm1_export			( dc2_pwm1		),
-	.dc2_pwm2_export			( dc2_pwm2		),
+        .ir_led2_export			( ir_led2		),
+ 	.ir_rx2_conduit_end_export	( ir_rx2		),
+ 	.dc2_pwm1_export			   ( dc2_pwm1		),
+	.dc2_pwm2_export			   ( dc2_pwm2		),
  	 
  	 
  	 // Stepper Motor Interface 	 
@@ -152,16 +162,16 @@ BeInMotion_qsys	b2v_inst(
 	.st_current_sensor_SS_n			( stm_cnv		),
 	
 	 //Battery Gas Guage Interface
-	.bat_gas_gauge_sda_padoen_o		( gauge_sda_oe		),
+	.bat_gas_gauge_sda_padoen_o	( gauge_sda_oe		),
 	.bat_gas_gauge_scl_pad_o		( gauge_scl_out		),
-	.bat_gas_gauge_scl_padoen_o		( gauge_scl_oe		),
+	.bat_gas_gauge_scl_padoen_o	( gauge_scl_oe		),
 	.bat_gas_gauge_sda_pad_o		( gauge_sda_out		),
-	.bat_cc_al_n_export			( gauge_cc_al_n		),
+	.bat_cc_al_n_export			   ( gauge_cc_al_n		),
 	.bat_gas_gauge_scl_pad_i		( gauge_scl_in		),
 	.bat_gas_gauge_sda_pad_i		( gauge_sda_in		),	
 	
          // Proximity Sensor Interface         
-	.ps_din_export				( ps_dout		),
+	.ps_din_export				      ( ps_dout		),
 	.proximity_ir_sda_pad_i			( ps_sda_in		),
 	.proximity_ir_scl_pad_i			( ps_scl_in		),	
         .ps_en_export				( ps_enb		),	
@@ -179,38 +189,43 @@ BeInMotion_qsys	b2v_inst(
 	 
          // LCD Interface
 	.lcd_intf_readdata			( rdd			),
-	.lcd_intf_write_n			( SYNTHESIZED_WIRE_6	),
-	.lcd_intf_address			( lcd_rs		),
-	.lcd_intf_read_n			( SYNTHESIZED_WIRE_5	),
-	.lcd_intf_chipselect_n			( SYNTHESIZED_WIRE_8	),	
+	.lcd_intf_write_n			   ( SYNTHESIZED_WIRE_6	),
+	.lcd_intf_address			   ( lcd_rs		),
+	.lcd_intf_read_n			   ( SYNTHESIZED_WIRE_5	),
+	.lcd_intf_chipselect_n		( SYNTHESIZED_WIRE_8	),	
 	.lcd_intf_writedata			( SYNTHESIZED_WIRE_7	),	
 	
 	//Avalon Stepper motor interface
-	.stpr_motor_export  ( stm_out) ,
+	.stpr_motor_export         ( stm_out) ,
 	
 
 	// Push Button
-	.pb_export				( pb 			),
+	.pb_export				      ( pb 			),
 	
 	// User I/O
 	.user_io_export				( gpio 			),
 	
-        // User LED           
-	.user_led_export			( user_led 		)
+   // User LED           
+	.user_led_export			   ( user_led 		),
 	
+	// uart0
+   .uart_0_external_connection_rxd   ( uart_0_rxd ),
+   .uart_0_external_connection_txd   ( uart_0_txd ),
+	.uart_0_external_connection_cts_n ( uart_0_cts_n ),
+   .uart_0_external_connection_rts_n ( uart_0_rts_n )	
 );
 
 
 Reset_Delay	b2v_inst21(
 	.iRST					( SYNTHESIZED_WIRE_4	),
 	.iCLK					( osc_clk		),
-	.oRESET					( sys_reset_n		)
+	.oRESET				( sys_reset_n		)
 );
 
 
 lpm_counter0	b2v_inst1(
 	.clock					( osc_clk		),
-	.q					( cnt			)
+	.q					      ( cnt			)
 );
 
 assign  gauge_scl_in = gauge_scl;

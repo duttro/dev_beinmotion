@@ -5,17 +5,18 @@
   <columns>
    <connections preferredWidth="47" />
    <irq preferredWidth="34" />
+   <export preferredWidth="165" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="278" />
-   <clocksource preferredWidth="277" />
-   <frequency preferredWidth="268" />
+   <clockname preferredWidth="393" />
+   <clocksource preferredWidth="392" />
+   <frequency preferredWidth="383" />
   </columns>
  </clocktable>
  <library
    expandedCategories="Library/Interface Protocols,Project,Library/Interface Protocols/Serial,Library" />
- <window width="1135" height="1023" x="834" y="16" />
+ <window width="1480" height="1023" x="510" y="34" />
  <hdlexample language="VERILOG" />
 </preferences>
