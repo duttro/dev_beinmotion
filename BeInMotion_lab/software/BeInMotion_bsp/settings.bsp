@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jan 22, 2013 10:54:13 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1358913253698</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Jan 29, 2013 8:26:42 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1359466002590</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\dev_beinmotion\BeInMotion_lab\software\BeInMotion_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\dev_beinmotion\BeInMotion_lab\BeInMotion_qsys.sopcinfo</SopcDesignFile>

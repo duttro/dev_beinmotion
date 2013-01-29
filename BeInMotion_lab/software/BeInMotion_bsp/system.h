@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'BeInMotion_qsys'
  * SOPC Builder design path: C:/dev_beinmotion/BeInMotion_lab/BeInMotion_qsys.sopcinfo
  *
- * Generated: Tue Jan 22 22:50:34 EST 2013
+ * Generated: Tue Jan 29 08:26:38 EST 2013
  */
 
 /*
@@ -663,7 +663,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1358912147
+#define SYSID_TIMESTAMP 1359424043
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

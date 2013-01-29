@@ -361,133 +361,192 @@ void move_bwd()
 }
 
 
-int main()
+//int main()
+//{
+//  //Stop all motors
+//  IOWR(DC2_PWM2_BASE+0x08,0,0);
+//  IOWR(DC2_PWM1_BASE+0x08,0,0);
+//  IOWR(DC1_PWM2_BASE+0x08,0,0);
+//  IOWR(DC1_PWM1_BASE+0x08,0,0);
+//
+//  //all LEDs off
+//  IOWR(USER_LED_BASE,0,7);
+//  LCD_init(LCD_INTF_BASE);
+//
+//  //---------------Hardware PID Initialization------------//
+//  IOWR(PID_CON_M1_BASE,0x00,(unsigned int)dc_m1_Kp);          //Kp
+//  IOWR(PID_CON_M2_BASE,0x00,(unsigned int)dc_m2_Kp);
+//
+//  IOWR(PID_CON_M1_BASE,0x01,(unsigned int)dc_m1_Ki);          //Ki
+//  IOWR(PID_CON_M2_BASE,0x01,(unsigned int)dc_m2_Ki);
+//
+//  IOWR(PID_CON_M1_BASE,0x02,(unsigned int)dc_m1_Kd);          //Kd
+//  IOWR(PID_CON_M2_BASE,0x02,(unsigned int)dc_m2_Kd);
+//
+//  IOWR(PID_CON_M1_BASE,0x03,DC_M1_COUNT_REF);           //Reference
+//  IOWR(PID_CON_M2_BASE,0x03,DC_M2_COUNT_REF);
+//  //---------------------------------------------------------//
+//
+//  // Mode Selection LCD Display
+//  LCD_draw_box (0, 0 ,160,128, RGB16(255,0,0),1);
+//  LCD_draw_round_corner_box(5,5,155,123,10,RGB16(25,27,126),1);
+//  LCD_print_string(22,12,RGB16(255,255,255),(char *)cour10_font_array,"Mode Selection");
+//  LCD_draw_line(22, 24,135, 24,5, RGB16(255,255,255));
+//  LCD_print_string(8,40,RGB16(255,255,255),(char*)cour10_font_array,"SW7 : Table Edge");
+//  LCD_print_string(8,55,RGB16(255,255,255),(char *)cour10_font_array,"SW8 : Wall Detect");
+//
+//  while(1)
+//  {
+//    while( (IORD(PB_BASE,0) & 0x7F) == 0x7F ) {}
+//    if((IORD(PB_BASE,0) == 0x5F))  //SW7
+//    {
+//        table_edge = 1;
+//        wall_detect = 0;
+//        while( (IORD(PB_BASE,0) & 0x7F) != 0x7F ) {}
+//        usleep(100000);
+//        break;
+//    }
+//    else if((IORD(PB_BASE,0) == 0x3F)) //SW8
+//    {
+//    	table_edge = 0;
+//        wall_detect = 1;
+//        while( (IORD(PB_BASE,0) & 0x7F) != 0x7F ) {}
+//        usleep(100000);
+//        break;
+//    }
+//    if((IORD(PB_BASE,0) == 0x77)) //SW5
+//    {
+//        table_edge = 0;
+//        wall_detect = 0;
+//        while( (IORD(PB_BASE,0) & 0x7F) != 0x7F ) {}
+//        usleep(100000);
+//        LCD_draw_box (0, 0 ,160,128, RGB16(255,0,0),1);
+//        LCD_draw_round_corner_box(5,5,155,123,10,RGB16(25,27,126),1);
+//        break;
+//    }
+//    while( (IORD(PB_BASE,0) & 0x7F) != 0x7F ){}
+//  } // End of mode selection
+//
+//  alt_irq_register(IR_RX2_IRQ,(void* )0,(alt_isr_func)isr_dc_m2);
+//  alt_irq_register(IR_RX1_IRQ,(void* )0,(alt_isr_func)isr_dc_m1);
+//
+// //Enable IR LED
+//  IOWR(IR_LED1_BASE,0,1);
+//  IOWR(IR_LED2_BASE,0,1);
+//
+//  i = 0;
+//  while(1)
+//  {
+//    if(table_edge == 1)
+//    {
+//    	if(i >= 4) i = 0;
+//        else       i++;
+//        move_fwd();
+//
+//            while ( IORD(PS_DIN_BASE,0) != 0)
+//            {
+//                IOWR(USER_LED_BASE,0,0);
+//                if(i>=4) i = 0;
+//                else    i++;
+//                usleep(300000);
+//                move_bwd();
+//                usleep(300000);
+//                IOWR(USER_LED_BASE,0,7);
+//                turn_left();
+//                usleep(300000);
+//            }
+//    }
+//    else if(wall_detect == 1)
+//    {
+//    	if(i >= 4)
+//        	i = 0;
+//        else
+//        	i++;
+//        move_fwd();
+//        if(IORD(PS_DIN_BASE,0) == 1)
+//        {
+//           for(j=0;j<4;j++)
+//             {
+//                usleep(1000);
+//                turn_left();
+//             }
+//        }
+//        else
+//        {
+//            while ( IORD(PS_DIN_BASE,0) == 0)
+//            {
+//                 IOWR(USER_LED_BASE,0,0);
+//                 if(i >= 4) i = 0;
+//                 else    i++;
+//                 usleep(300000);
+//                 move_bwd();
+//                 IOWR(USER_LED_BASE,0,7);
+//                 usleep(300000);
+//                 turn_left();
+//                 usleep(300000);
+//            }
+//        }
+//
+//    }
+//  }
+//  return 0;
+//}
+
+/* file: UART_fd.c */
+#include <stdio.h>          // printf
+#include <unistd.h>         // read, write, close
+#include <fcntl.h>          // open, O_RDWR | O_NONBLOCK
+#include <string.h>         // strcpy
+#include <ctype.h>          // isprint
+int main ( void )
 {
-  //Stop all motors
-  IOWR(DC2_PWM2_BASE+0x08,0,0);
-  IOWR(DC2_PWM1_BASE+0x08,0,0);
-  IOWR(DC1_PWM2_BASE+0x08,0,0);
-  IOWR(DC1_PWM1_BASE+0x08,0,0);
+	  //Stop all motors
+	  IOWR(DC2_PWM2_BASE+0x08,0,0);
+	  IOWR(DC2_PWM1_BASE+0x08,0,0);
+	  IOWR(DC1_PWM2_BASE+0x08,0,0);
+	  IOWR(DC1_PWM1_BASE+0x08,0,0);
 
-  //all LEDs off
-  IOWR(USER_LED_BASE,0,7);
-  LCD_init(LCD_INTF_BASE);
+	  //all LEDs off
+	  IOWR(USER_LED_BASE,0,7);
+	  LCD_init(LCD_INTF_BASE);
 
-  //---------------Hardware PID Initialization------------//
-  IOWR(PID_CON_M1_BASE,0x00,(unsigned int)dc_m1_Kp);          //Kp
-  IOWR(PID_CON_M2_BASE,0x00,(unsigned int)dc_m2_Kp);
+	  // Mode Selection LCD Display
+	  LCD_draw_box (0, 0 ,160,128, RGB16(255,0,0),1);
+	  LCD_draw_round_corner_box(5,5,155,123,10,RGB16(25,27,126),1);
+	  LCD_print_string(22,12,RGB16(255,255,255),(char *)cour10_font_array,"Bending Unit 22");
+	  LCD_draw_line(22, 24,135, 24,5, RGB16(255,255,255));
+	  LCD_print_string(8,40,RGB16(255,255,255),(char*)cour10_font_array,  "UART 0 Test");
+	  //LCD_print_string(8,55,RGB16(255,255,255),(char *)cour10_font_array,"SW8 : Wall Detect");
 
-  IOWR(PID_CON_M1_BASE,0x01,(unsigned int)dc_m1_Ki);          //Ki
-  IOWR(PID_CON_M2_BASE,0x01,(unsigned int)dc_m2_Ki);
+	char buff[80];
+    int fd;
+    int count = 0;
 
-  IOWR(PID_CON_M1_BASE,0x02,(unsigned int)dc_m1_Kd);          //Kd
-  IOWR(PID_CON_M2_BASE,0x02,(unsigned int)dc_m2_Kd);
+    printf("\n\rStarting UART_fd.c\n\r");
+    fd = open ("/dev/uart_0", O_RDWR | O_NONBLOCK);
+    printf("fd=%08x\n", fd);
+    strcpy(buff, "\n\rhello UART. talk to me.\n\r");
+    write(fd, buff, strlen(buff));
 
-  IOWR(PID_CON_M1_BASE,0x03,DC_M1_COUNT_REF);           //Reference
-  IOWR(PID_CON_M2_BASE,0x03,DC_M2_COUNT_REF);
-  //---------------------------------------------------------//
-
-  // Mode Selection LCD Display
-  LCD_draw_box (0, 0 ,160,128, RGB16(255,0,0),1);
-  LCD_draw_round_corner_box(5,5,155,123,10,RGB16(25,27,126),1);
-  LCD_print_string(22,12,RGB16(255,255,255),(char *)cour10_font_array,"Mode Selection");
-  LCD_draw_line(22, 24,135, 24,5, RGB16(255,255,255));
-  LCD_print_string(8,40,RGB16(255,255,255),(char*)cour10_font_array,"SW7 : Table Edge");
-  LCD_print_string(8,55,RGB16(255,255,255),(char *)cour10_font_array,"SW8 : Wall Detect");
-
-  while(1)
-  {
-    while( (IORD(PB_BASE,0) & 0x7F) == 0x7F ) {}
-    if((IORD(PB_BASE,0) == 0x5F))  //SW7
+    while (1)
     {
-        table_edge = 1;
-        wall_detect = 0;
-        while( (IORD(PB_BASE,0) & 0x7F) != 0x7F ) {}
-        usleep(100000);
-        break;
-    }
-    else if((IORD(PB_BASE,0) == 0x3F)) //SW8
-    {
-    	table_edge = 0;
-        wall_detect = 1;
-        while( (IORD(PB_BASE,0) & 0x7F) != 0x7F ) {}
-        usleep(100000);
-        break;
-    }
-    if((IORD(PB_BASE,0) == 0x77)) //SW5
-    {
-        table_edge = 0;
-        wall_detect = 0;
-        while( (IORD(PB_BASE,0) & 0x7F) != 0x7F ) {}
-        usleep(100000);
-        LCD_draw_box (0, 0 ,160,128, RGB16(255,0,0),1);
-        LCD_draw_round_corner_box(5,5,155,123,10,RGB16(25,27,126),1);
-        break;
-    }
-    while( (IORD(PB_BASE,0) & 0x7F) != 0x7F ){}
-  } // End of mode selection
+        int nbr;
+        char ch;
 
-  alt_irq_register(IR_RX2_IRQ,(void* )0,(alt_isr_func)isr_dc_m2);
-  alt_irq_register(IR_RX1_IRQ,(void* )0,(alt_isr_func)isr_dc_m1);
-
- //Enable IR LED
-  IOWR(IR_LED1_BASE,0,1);
-  IOWR(IR_LED2_BASE,0,1);
-
-  i = 0;
-  while(1)
-  {
-    if(table_edge == 1)
-    {
-    	if(i >= 4) i = 0;
-        else       i++;
-        move_fwd();
-
-            while ( IORD(PS_DIN_BASE,0) != 0)
-            {
-                IOWR(USER_LED_BASE,0,0);
-                if(i>=4) i = 0;
-                else    i++;
-                usleep(300000);
-                move_bwd();
-                usleep(300000);
-                IOWR(USER_LED_BASE,0,7);
-                turn_left();
-                usleep(300000);
-            }
-    }
-    else if(wall_detect == 1)
-    {
-    	if(i >= 4)
-        	i = 0;
-        else
-        	i++;
-        move_fwd();
-        if(IORD(PS_DIN_BASE,0) == 1)
+        if ( (nbr = read(fd, buff, 1)) > 0)
         {
-           for(j=0;j<4;j++)
-             {
-                usleep(1000);
-                turn_left();
-             }
+            ch = buff[0];
+            printf("%c[%02x]", isprint(buff[0])?buff[0]:'_', buff[0]);
+            write(fd, buff, nbr);
+            if (ch == 0x1b) break;
         }
-        else
-        {
-            while ( IORD(PS_DIN_BASE,0) == 0)
-            {
-                 IOWR(USER_LED_BASE,0,0);
-                 if(i >= 4) i = 0;
-                 else    i++;
-                 usleep(300000);
-                 move_bwd();
-                 IOWR(USER_LED_BASE,0,7);
-                 usleep(300000);
-                 turn_left();
-                 usleep(300000);
-            }
-        }
-
+        count++; if (count > 100000) { count=0; putchar('.');}
     }
-  }
-  return 0;
+    strcpy(buff, "\n\rgood bye\n\r");
+    write(fd, buff, strlen(buff));
+
+    close(fd);
+
+    printf("\nall done\n");
+    return 0;
 }

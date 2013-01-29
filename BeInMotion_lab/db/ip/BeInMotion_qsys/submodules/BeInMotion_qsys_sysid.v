@@ -36,7 +36,7 @@ module BeInMotion_qsys_sysid (
 
   wire    [ 31: 0] readdata;
   //control_slave, which is an e_avalon_slave
-  assign readdata = address ? 1359002352 : 0;
+  assign readdata = address ? 1359424043 : 0;
 
 endmodule
 

@@ -152,9 +152,9 @@ SOPC_SYSID_FLAG += --sidp=0x80
 ELF_PATCH_FLAG  += --sidp 0x80
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1358912147
-SOPC_SYSID_FLAG += --timestamp=1358912147
-ELF_PATCH_FLAG  += --timestamp 1358912147
+# setting SOPC_TIMESTAMP is 1359424043
+SOPC_SYSID_FLAG += --timestamp=1359424043
+ELF_PATCH_FLAG  += --timestamp 1359424043
 
 # Small-footprint (polled mode) driver none 
 # setting altera_avalon_jtag_uart_driver.enable_small_driver is false
@@ -223,7 +223,7 @@ ALT_CPPFLAGS += -DALT_NO_INSTRUCTION_EMULATION
 # access routines) to fail. You can define a symbol provided by each driver to 
 # prevent it from being removed. If true, adds -DALT_USE_SMALL_DRIVERS to 
 # ALT_CPPFLAGS in public.mk. none 
-# setting hal.enable_reduced_device_drivers is true
+# setting hal.enable_reduced_device_drivers is 1
 ALT_CPPFLAGS += -DALT_USE_SMALL_DRIVERS
 
 # Turns on HAL runtime stack checking feature. Enabling this setting causes 
@@ -245,7 +245,7 @@ ALT_CPPFLAGS += -DALT_USE_SMALL_DRIVERS
 # are removed such as floating-point support in printf(), stdin input routines, 
 # and buffered I/O. The small C library is not compatible with Micrium 
 # MicroC/OS-II. If true, adds -msmallc to ALT_LDFLAGS in public.mk. none 
-# setting hal.enable_small_c_library is true
+# setting hal.enable_small_c_library is 1
 ALT_LDFLAGS += -msmallc
 ALT_CPPFLAGS += -DSMALL_C_LIB
 
