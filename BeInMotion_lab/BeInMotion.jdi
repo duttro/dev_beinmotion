@@ -1,7 +1,7 @@
 <sld_project_info>
   <file_info>
-    <file checksum="0x005C1FAA" device="EP4CE22F17C7" path="BeInMotion.sof" usercode="0xFFFFFFFF"/>
-    <file checksum="0x1C78140F" device="EPCS16" path="BeInMotion.pof" usercode="0x00000000"/>
+    <file checksum="0x005CBF34" device="EP4CE22F17C7" path="BeInMotion.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x1C796E98" device="EPCS16" path="BeInMotion.pof" usercode="0x00000000"/>
   </file_info>
   <hub_info ir_width="2" node_count="2"/>
   <node_info>

@@ -38,6 +38,35 @@
          type = "long";
       }
    }
+   element ir_rx1.avalon_slave_0
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "139624";
+         type = "long";
+      }
+   }
+   element stpr_motor_cntrl.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "64";
+         type = "long";
+      }
+   }
+   element pid_con_m2.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "32";
+         type = "long";
+      }
+   }
    element ir_rx2.avalon_slave_0
    {
       datum _lockedAddress
@@ -64,40 +93,6 @@
          type = "long";
       }
    }
-   element dc1_pwm2.avalon_slave_0
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "139552";
-         type = "long";
-      }
-   }
-   element stpr_motor_cntrl.avalon_slave_0
-   {
-      datum baseAddress
-      {
-         value = "64";
-         type = "long";
-      }
-   }
-   element proximity_ir.avalon_slave_0
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "139360";
-         type = "long";
-      }
-   }
    element dc1_pwm1.avalon_slave_0
    {
       datum _lockedAddress
@@ -108,27 +103,6 @@
       datum baseAddress
       {
          value = "139584";
-         type = "long";
-      }
-   }
-   element ir_rx1.avalon_slave_0
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "139624";
-         type = "long";
-      }
-   }
-   element pid_con_m2.avalon_slave_0
-   {
-      datum baseAddress
-      {
-         value = "32";
          type = "long";
       }
    }
@@ -153,6 +127,19 @@
          type = "long";
       }
    }
+   element proximity_ir.avalon_slave_0
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "139360";
+         type = "long";
+      }
+   }
    element dc2_pwm1.avalon_slave_0
    {
       datum _lockedAddress
@@ -163,6 +150,19 @@
       datum baseAddress
       {
          value = "139600";
+         type = "long";
+      }
+   }
+   element dc1_pwm2.avalon_slave_0
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "139552";
          type = "long";
       }
    }
@@ -530,7 +530,7 @@
          type = "boolean";
       }
    }
-   element ps_led_on.s1
+   element ps_din.s1
    {
       datum _lockedAddress
       {
@@ -539,85 +539,15 @@
       }
       datum baseAddress
       {
-         value = "139520";
+         value = "139488";
          type = "long";
       }
    }
-   element timer.s1
+   element uart_0.s1
    {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
       datum baseAddress
       {
-         value = "139264";
-         type = "long";
-      }
-   }
-   element user_io.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "139392";
-         type = "long";
-      }
-   }
-   element user_led.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "139408";
-         type = "long";
-      }
-   }
-   element pb.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "139424";
-         type = "long";
-      }
-   }
-   element ps_en.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "139504";
-         type = "long";
-      }
-   }
-   element bat_cc_al_n.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "139440";
+         value = "96";
          type = "long";
       }
    }
@@ -634,15 +564,7 @@
          type = "long";
       }
    }
-   element uart_0.s1
-   {
-      datum baseAddress
-      {
-         value = "96";
-         type = "long";
-      }
-   }
-   element ps_din.s1
+   element user_led.s1
    {
       datum _lockedAddress
       {
@@ -651,7 +573,46 @@
       }
       datum baseAddress
       {
-         value = "139488";
+         value = "139408";
+         type = "long";
+      }
+   }
+   element timer.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "139264";
+         type = "long";
+      }
+   }
+   element bat_cc_al_n.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "139440";
+         type = "long";
+      }
+   }
+   element pb.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "139424";
          type = "long";
       }
    }
@@ -678,6 +639,45 @@
       datum baseAddress
       {
          value = "65536";
+         type = "long";
+      }
+   }
+   element ps_en.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "139504";
+         type = "long";
+      }
+   }
+   element ps_led_on.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "139520";
+         type = "long";
+      }
+   }
+   element user_io.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "139392";
          type = "long";
       }
    }
@@ -800,7 +800,7 @@
  <parameter name="projectName" value="BeInMotion.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1358911796043" />
+ <parameter name="timeStamp" value="1360195822017" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="ext_clk.clk_in" type="clock" dir="end" />
@@ -1512,7 +1512,7 @@
   <parameter name="simTrueBaud" value="false" />
   <parameter name="stopBits" value="1" />
   <parameter name="syncRegDepth" value="2" />
-  <parameter name="useCtsRts" value="true" />
+  <parameter name="useCtsRts" value="false" />
   <parameter name="useEopRegister" value="false" />
   <parameter name="useRelativePathForSimFile" value="false" />
  </module>

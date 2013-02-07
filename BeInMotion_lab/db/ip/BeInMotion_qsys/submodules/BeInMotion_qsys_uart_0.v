@@ -112,8 +112,8 @@ module BeInMotion_qsys_uart_0_tx (
   wire    [  9: 0] tx_shift_register_contents;
   wire             tx_wr_strobe_onset;
   reg              txd;
-  wire    [  9: 0] unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx6_in;
-  reg     [  9: 0] unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx6_out;
+  wire    [  9: 0] unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_in;
+  reg     [  9: 0] unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_out;
   assign tx_wr_strobe_onset = tx_wr_strobe && begintransfer;
   assign tx_load_val = {{1 {1'b1}},
     tx_data,
@@ -210,19 +210,19 @@ module BeInMotion_qsys_uart_0_tx (
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
-          unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx6_out <= 0;
+          unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_out <= 0;
       else if (clk_en)
-          unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx6_out <= unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx6_in;
+          unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_out <= unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_in;
     end
 
 
-  assign unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx6_in = (do_load_shifter)? tx_load_val :
+  assign unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_in = (do_load_shifter)? tx_load_val :
     (do_shift)? {1'b0,
-    unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx6_out[9 : 1]} :
-    unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx6_out;
+    unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_out[9 : 1]} :
+    unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_out;
 
-  assign tx_shift_register_contents = unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx6_out;
-  assign tx_shift_reg_out = unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx6_out[0];
+  assign tx_shift_register_contents = unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_out;
+  assign tx_shift_reg_out = unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_out[0];
 
 endmodule
 
@@ -555,8 +555,8 @@ module BeInMotion_qsys_uart_0_rx (
   wire             stop_bit;
   wire             sync_rxd;
   wire             unused_start_bit;
-  wire    [  9: 0] unxshiftxrxd_shift_regxshift_reg_start_bit_nxx7_in;
-  reg     [  9: 0] unxshiftxrxd_shift_regxshift_reg_start_bit_nxx7_out;
+  wire    [  9: 0] unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_in;
+  reg     [  9: 0] unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_out;
   BeInMotion_qsys_uart_0_rx_stimulus_source the_BeInMotion_qsys_uart_0_rx_stimulus_source
     (
       .baud_divisor  (baud_divisor),
@@ -722,19 +722,19 @@ unused_start_bit} = rxd_shift_reg;
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
-          unxshiftxrxd_shift_regxshift_reg_start_bit_nxx7_out <= 0;
+          unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_out <= 0;
       else if (clk_en)
-          unxshiftxrxd_shift_regxshift_reg_start_bit_nxx7_out <= unxshiftxrxd_shift_regxshift_reg_start_bit_nxx7_in;
+          unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_out <= unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_in;
     end
 
 
-  assign unxshiftxrxd_shift_regxshift_reg_start_bit_nxx7_in = (do_start_rx)? {10{1'b1}} :
+  assign unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_in = (do_start_rx)? {10{1'b1}} :
     (sample_enable)? {sync_rxd,
-    unxshiftxrxd_shift_regxshift_reg_start_bit_nxx7_out[9 : 1]} :
-    unxshiftxrxd_shift_regxshift_reg_start_bit_nxx7_out;
+    unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_out[9 : 1]} :
+    unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_out;
 
-  assign rxd_shift_reg = unxshiftxrxd_shift_regxshift_reg_start_bit_nxx7_out;
-  assign shift_reg_start_bit_n = unxshiftxrxd_shift_regxshift_reg_start_bit_nxx7_out[0];
+  assign rxd_shift_reg = unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_out;
+  assign shift_reg_start_bit_n = unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_out[0];
 
 endmodule
 
@@ -754,7 +754,6 @@ module BeInMotion_qsys_uart_0_regs (
                                       chipselect,
                                       clk,
                                       clk_en,
-                                      cts_n,
                                       framing_error,
                                       parity_error,
                                       read_n,
@@ -775,7 +774,6 @@ module BeInMotion_qsys_uart_0_regs (
                                       irq,
                                       readdata,
                                       readyfordata,
-                                      rts_n,
                                       rx_rd_strobe,
                                       status_wr_strobe,
                                       tx_data,
@@ -789,7 +787,6 @@ module BeInMotion_qsys_uart_0_regs (
   output           irq;
   output  [ 15: 0] readdata;
   output           readyfordata;
-  output           rts_n;
   output           rx_rd_strobe;
   output           status_wr_strobe;
   output  [  7: 0] tx_data;
@@ -799,7 +796,6 @@ module BeInMotion_qsys_uart_0_regs (
   input            chipselect;
   input            clk;
   input            clk_en;
-  input            cts_n;
   input            framing_error;
   input            parity_error;
   input            read_n;
@@ -815,15 +811,13 @@ module BeInMotion_qsys_uart_0_regs (
 
   wire             any_error;
   wire    [ 12: 0] baud_divisor;
-  reg     [ 12: 0] control_reg;
+  reg     [  9: 0] control_reg;
   wire             control_wr_strobe;
-  wire             cts_edge;
-  reg              cts_status_bit;
+  wire             cts_status_bit;
   reg              d1_rx_char_ready;
   reg              d1_tx_ready;
   wire             dataavailable;
-  reg              dcts_status_bit;
-  reg              delayed_unxcts_status_bitxx5;
+  wire             dcts_status_bit;
   reg              delayed_unxtx_readyxx4;
   wire    [ 12: 0] divisor_constant;
   wire             do_force_break;
@@ -831,7 +825,6 @@ module BeInMotion_qsys_uart_0_regs (
   wire             eop_status_bit;
   wire             ie_any_error;
   wire             ie_break_detect;
-  wire             ie_dcts;
   wire             ie_framing_error;
   wire             ie_parity_error;
   wire             ie_rx_char_ready;
@@ -843,8 +836,6 @@ module BeInMotion_qsys_uart_0_regs (
   wire             qualified_irq;
   reg     [ 15: 0] readdata;
   wire             readyfordata;
-  wire             rts_control_bit;
-  wire             rts_n;
   wire             rx_rd_strobe;
   wire    [ 15: 0] selected_read_data;
   wire    [ 12: 0] status_reg;
@@ -887,47 +878,14 @@ module BeInMotion_qsys_uart_0_regs (
       if (reset_n == 0)
           control_reg <= 0;
       else if (control_wr_strobe)
-          control_reg <= writedata[12 : 0];
+          control_reg <= writedata[9 : 0];
     end
 
 
   assign baud_divisor = divisor_constant;
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          cts_status_bit <= 1;
-      else if (clk_en)
-          cts_status_bit <= ~cts_n;
-    end
-
-
-  //delayed_unxcts_status_bitxx5, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          delayed_unxcts_status_bitxx5 <= 0;
-      else if (clk_en)
-          delayed_unxcts_status_bitxx5 <= cts_status_bit;
-    end
-
-
-  assign cts_edge = (cts_status_bit) ^  (delayed_unxcts_status_bitxx5);
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          dcts_status_bit <= 0;
-      else if (clk_en)
-          if (status_wr_strobe)
-              dcts_status_bit <= 0;
-          else if (cts_edge)
-              dcts_status_bit <= -1;
-    end
-
-
-  assign rts_n = ~rts_control_bit;
-  assign {rts_control_bit,
-ie_dcts,
-do_force_break,
+  assign cts_status_bit = 0;
+  assign dcts_status_bit = 0;
+  assign {do_force_break,
 ie_any_error,
 ie_rx_char_ready,
 ie_tx_ready,
@@ -983,8 +941,7 @@ ie_parity_error} = control_reg;
     ({16 {(address == 3'd2)}} & status_reg) |
     ({16 {(address == 3'd3)}} & control_reg);
 
-  assign qualified_irq = (ie_dcts           && dcts_status_bit ) ||
-    (ie_any_error      && any_error      ) ||
+  assign qualified_irq = (ie_any_error      && any_error      ) ||
     (ie_tx_shift_empty && tx_shift_empty ) ||
     (ie_tx_overrun     && tx_overrun     ) ||
     (ie_rx_overrun     && rx_overrun     ) ||
@@ -1041,7 +998,6 @@ module BeInMotion_qsys_uart_0 (
                                  begintransfer,
                                  chipselect,
                                  clk,
-                                 cts_n,
                                  read_n,
                                  reset_n,
                                  rxd,
@@ -1053,7 +1009,6 @@ module BeInMotion_qsys_uart_0 (
                                  irq,
                                  readdata,
                                  readyfordata,
-                                 rts_n,
                                  txd
                               )
   /* synthesis altera_attribute = "-name SYNCHRONIZER_IDENTIFICATION OFF" */ ;
@@ -1062,13 +1017,11 @@ module BeInMotion_qsys_uart_0 (
   output           irq;
   output  [ 15: 0] readdata;
   output           readyfordata;
-  output           rts_n;
   output           txd;
   input   [  2: 0] address;
   input            begintransfer;
   input            chipselect;
   input            clk;
-  input            cts_n;
   input            read_n;
   input            reset_n;
   input            rxd;
@@ -1085,7 +1038,6 @@ module BeInMotion_qsys_uart_0 (
   wire             parity_error;
   wire    [ 15: 0] readdata;
   wire             readyfordata;
-  wire             rts_n;
   wire             rx_char_ready;
   wire    [  7: 0] rx_data;
   wire             rx_overrun;
@@ -1141,7 +1093,6 @@ module BeInMotion_qsys_uart_0 (
       .chipselect       (chipselect),
       .clk              (clk),
       .clk_en           (clk_en),
-      .cts_n            (cts_n),
       .dataavailable    (dataavailable),
       .do_force_break   (do_force_break),
       .framing_error    (framing_error),
@@ -1151,7 +1102,6 @@ module BeInMotion_qsys_uart_0 (
       .readdata         (readdata),
       .readyfordata     (readyfordata),
       .reset_n          (reset_n),
-      .rts_n            (rts_n),
       .rx_char_ready    (rx_char_ready),
       .rx_data          (rx_data),
       .rx_overrun       (rx_overrun),

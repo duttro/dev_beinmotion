@@ -152,9 +152,9 @@ SOPC_SYSID_FLAG += --sidp=0x80
 ELF_PATCH_FLAG  += --sidp 0x80
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1359424043
-SOPC_SYSID_FLAG += --timestamp=1359424043
-ELF_PATCH_FLAG  += --timestamp 1359424043
+# setting SOPC_TIMESTAMP is 1360196726
+SOPC_SYSID_FLAG += --timestamp=1360196726
+ELF_PATCH_FLAG  += --timestamp 1360196726
 
 # Small-footprint (polled mode) driver none 
 # setting altera_avalon_jtag_uart_driver.enable_small_driver is false
@@ -178,7 +178,8 @@ ELF_PATCH_FLAG  += --timestamp 1359424043
 # multiple inheritance and exceptions are not supported. If false, adds 
 # -DALT_NO_C_PLUS_PLUS to ALT_CPPFLAGS in public.mk, and reduces code 
 # footprint. none 
-# setting hal.enable_c_plus_plus is 1
+# setting hal.enable_c_plus_plus is 0
+ALT_CPPFLAGS += -DALT_NO_C_PLUS_PLUS
 
 # When your application exits, close file descriptors, call C++ destructors, 
 # etc. Code footprint can be reduced by disabling clean exit. If disabled, adds 
@@ -223,7 +224,7 @@ ALT_CPPFLAGS += -DALT_NO_INSTRUCTION_EMULATION
 # access routines) to fail. You can define a symbol provided by each driver to 
 # prevent it from being removed. If true, adds -DALT_USE_SMALL_DRIVERS to 
 # ALT_CPPFLAGS in public.mk. none 
-# setting hal.enable_reduced_device_drivers is 1
+# setting hal.enable_reduced_device_drivers is true
 ALT_CPPFLAGS += -DALT_USE_SMALL_DRIVERS
 
 # Turns on HAL runtime stack checking feature. Enabling this setting causes 

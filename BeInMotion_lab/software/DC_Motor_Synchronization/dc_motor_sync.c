@@ -492,12 +492,14 @@ void move_bwd()
 //  return 0;
 //}
 
+
 /* file: UART_fd.c */
 #include <stdio.h>          // printf
 #include <unistd.h>         // read, write, close
 #include <fcntl.h>          // open, O_RDWR | O_NONBLOCK
 #include <string.h>         // strcpy
 #include <ctype.h>          // isprint
+
 int main ( void )
 {
 	  //Stop all motors
@@ -515,38 +517,66 @@ int main ( void )
 	  LCD_draw_round_corner_box(5,5,155,123,10,RGB16(25,27,126),1);
 	  LCD_print_string(22,12,RGB16(255,255,255),(char *)cour10_font_array,"Bending Unit 22");
 	  LCD_draw_line(22, 24,135, 24,5, RGB16(255,255,255));
-	  LCD_print_string(8,40,RGB16(255,255,255),(char*)cour10_font_array,  "UART 0 Test");
-	  //LCD_print_string(8,55,RGB16(255,255,255),(char *)cour10_font_array,"SW8 : Wall Detect");
+	  LCD_print_string(8,40,RGB16(255,255,255),(char*)cour10_font_array,  "UART0 Tst 020613");
+	  LCD_print_string(8,55,RGB16(255,255,255),(char*)cour10_font_array,  "WiFly to UART0  ");
 
-	char buff[80];
-    int fd;
-    int count = 0;
+	char buff[20];
+	char tbuf[20];
+	char cmdBuff[3]="abc";
 
+	char alpha[26]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char c;
+    int nios;
+    int term;
+    int nbr;
+    int tnbr;
+    int i;
+    int cmd_length;
+    int s;
+    printf("Hello world.\n");
     printf("\n\rStarting UART_fd.c\n\r");
-    fd = open ("/dev/uart_0", O_RDWR | O_NONBLOCK);
-    printf("fd=%08x\n", fd);
-    strcpy(buff, "\n\rhello UART. talk to me.\n\r");
-    write(fd, buff, strlen(buff));
+
+    nios = open("/dev/uart_0", O_RDWR | O_NONBLOCK);
+    term = open("/dev/jtag_uart", O_RDWR | O_NONBLOCK);
+
+    printf("Terminal Window Ready.\n");
 
     while (1)
     {
-        int nbr;
-        char ch;
 
-        if ( (nbr = read(fd, buff, 1)) > 0)
+    	if ( (nbr = read(nios, &buff, 20) ) > 0) // get line from nios RX port
         {
-            ch = buff[0];
-            printf("%c[%02x]", isprint(buff[0])?buff[0]:'_', buff[0]);
-            write(fd, buff, nbr);
-            if (ch == 0x1b) break;
+        	//printf("returned length %i niosRX %s\n", nbr, buff); // print nios RX to term
+        	printf("%c",buff[0]);
         }
-        count++; if (count > 100000) { count=0; putchar('.');}
+
+        if ( (tnbr = read(term, &tbuf, 20) ) > 0) // get from term
+        {
+        	printf("term returned length= %i string= %s\n",tnbr, tbuf);
+
+        	tbuf[tnbr] = 0x0d; // add terminating CR to string
+
+        	if (tbuf[0]=='$' && tbuf[1]=='$' && tbuf[2]=='$')
+				{
+					printf("CMD mode sent to WiFly\n");
+					tnbr = tnbr -2; //don't send LF CR if going into WiFly CMD mode
+				}
+
+        	for (s = 0; s <= tnbr; s++)
+        	    	{
+        	    	c = tbuf[s];
+        	    	repeatWrite:
+        	    	i=write(nios, &c ,1);
+        	        if (i==0)
+        	        	goto repeatWrite;
+
+        	    	//printf("%i number written %i\n",s, i );
+        	    	}
+
+        }
+
     }
-    strcpy(buff, "\n\rgood bye\n\r");
-    write(fd, buff, strlen(buff));
-
-    close(fd);
-
-    printf("\nall done\n");
+    close(nios);
+    close(term);
     return 0;
 }

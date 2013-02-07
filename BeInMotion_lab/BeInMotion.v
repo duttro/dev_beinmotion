@@ -52,9 +52,9 @@ module BeInMotion(
 	user_led,
 	stm_out,
 	uart_0_rxd,
-   uart_0_txd,
-   uart_0_cts_n,
-   uart_0_rts_n
+   uart_0_txd//,
+   //uart_0_cts_n,
+   //uart_0_rts_n
 );
 
 
@@ -96,8 +96,8 @@ output wire [3:0] stm_out;
 // added ports for new uart
 input  wire       uart_0_rxd;   // uart_0_external_connection.rxd
 output wire       uart_0_txd;   //                           .txd
-input  wire       uart_0_cts_n; //                           .cts_n
-output wire       uart_0_rts_n; //                           .rts_n
+//input  wire       uart_0_cts_n; //                           .cts_n
+//output wire       uart_0_rts_n; //                           .rts_n
 
 wire	[15:0] cnt;
 wire	dc1_pwm1;
@@ -211,8 +211,8 @@ BeInMotion_qsys	b2v_inst(
 	// uart0
    .uart_0_external_connection_rxd   ( uart_0_rxd ),
    .uart_0_external_connection_txd   ( uart_0_txd ),
-	.uart_0_external_connection_cts_n ( uart_0_cts_n ),
-   .uart_0_external_connection_rts_n ( uart_0_rts_n )	
+	//.uart_0_external_connection_cts_n ( uart_0_cts_n ),
+   //.uart_0_external_connection_rts_n ( uart_0_rts_n )	
 );
 
 

@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jan 29, 2013 8:26:42 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1359466002590</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Feb 6, 2013 10:13:43 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1360206823046</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\dev_beinmotion\BeInMotion_lab\software\BeInMotion_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\dev_beinmotion\BeInMotion_lab\BeInMotion_qsys.sopcinfo</SopcDesignFile>
@@ -746,7 +746,7 @@
                 <SettingName>hal.enable_c_plus_plus</SettingName>
                 <Identifier>ALT_NO_C_PLUS_PLUS</Identifier>
                 <Type>Boolean</Type>
-                <Value>1</Value>
+                <Value>0</Value>
                 <DefaultValue>1</DefaultValue>
                 <DestinationFile>public_mk_define</DestinationFile>
                 <Description>Enable support for a subset of the C++ language. This option increases code footprint by adding support for C++ constructors. Certain features, such as multiple inheritance and exceptions are not supported. If false, adds -DALT_NO_C_PLUS_PLUS to ALT_CPPFLAGS in public.mk, and reduces code footprint.</Description>

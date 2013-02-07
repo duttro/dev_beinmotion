@@ -144,6 +144,6 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_N14 -to uart_0_rxd
 set_location_assignment PIN_P14 -to uart_0_txd
-set_location_assignment PIN_L14 -to uart_0_rts_n
-set_location_assignment PIN_G1 -to uart_0_cts_n
+set_location_assignment PIN_L14 -to uart_0_rts_n -disable
+set_location_assignment PIN_G1 -to uart_0_cts_n -disable
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
